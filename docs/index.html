@@ -3,10 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deeply Slow</title>
+    <title>Deeply Slow Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passero+One&family=Domine:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #EAE4E3; --bg-light: #F2EDEC;
+            --text: #2C2421; --text-secondary: #6B5B54;
+            --accent: #1D3A72;
+            --btn: #284A93; --btn-hover: #1D3A72;
+            --link: #FF3926;
+            --border: #D4C4BC;
+            --font-heading: 'Passero One', cursive;
+            --font-body: 'Domine', serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(234,228,227,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); transition: box-shadow 0.3s ease; }
+        nav.scrolled { box-shadow: 0 2px 20px rgba(44,36,33,0.08); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .nav-logo { font-family: var(--font-heading); font-size: 1.25rem; color: var(--text); cursor: pointer; text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-family: var(--font-body); font-size: 0.85rem; color: var(--text-secondary); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; cursor: pointer; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-right { display: flex; align-items: center; gap: 1rem; }
+        .lang-switch { display: flex; align-items: center; gap: 0.35rem; font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.03em; }
+        .lang-switch a { color: var(--text-secondary); text-decoration: none; cursor: pointer; padding: 0.2rem 0.3rem; border-radius: 3px; transition: color 0.2s, background 0.2s; }
+        .lang-switch a:hover { color: var(--text); }
+        .lang-switch a.active { color: var(--text); font-weight: 600; }
+        .lang-switch span { color: var(--border); user-select: none; }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); margin: 5px 0; transition: all 0.3s; }
+        .page { display: none; opacity: 0; transition: opacity 0.4s ease; }
+        .page.active { display: block; opacity: 1; }
+        section { max-width: 780px; margin: 0 auto; padding: 5rem 2rem; }
+        section:first-child { padding-top: 8rem; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(--text); }
+        h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.15; margin-bottom: 1rem; }
+        h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); line-height: 1.25; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1rem; color: var(--text-secondary); }
+        .lead { font-size: 1.15rem; line-height: 1.8; }
+        .separator { width: 48px; height: 2px; background: var(--border); margin: 3rem 0; }
+        .hero { max-width: 100%; padding: 0; }
+        .hero-inner { max-width: 1100px; margin: 0 auto; padding: 8rem 2rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 85vh; }
+        .hero-text h1 { margin-bottom: 1.5rem; }
+        .hero-text .tagline { font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.8; }
+        .hero-image { display: flex; justify-content: center; }
+        .hero-image img { max-width: 100%; height: auto; border-radius: 8px; }
+        .section-image { margin-top: 1.5rem; display: block; }
+        .section-image img { width: 100%; height: auto; border-radius: 8px; display: block; }
+        .cta { display: inline-block; font-family: var(--font-body); font-size: 0.95rem; color: var(--btn); text-decoration: none; border: 1.5px solid var(--btn); padding: 0.75rem 1.8rem; border-radius: 4px; transition: all 0.25s ease; cursor: pointer; background: none; margin-top: 1.5rem; }
+        .cta:hover { background: var(--btn); color: #fff; }
+        .cta-arrow::before { content: '\2192\00a0'; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-secondary); }
+        .feature-list li::before { content: '\2013'; position: absolute; left: 0; color: var(--accent); }
+        .walk-step { margin-bottom: 2rem; }
+        .walk-step strong { display: block; font-family: var(--font-heading); font-weight: 400; font-size: 1.1rem; color: var(--text); margin-bottom: 0.25rem; }
+        .walk-step p { margin-bottom: 0; }
+        .founders { font-style: italic; color: var(--text-secondary); }
+        .contact-email { font-size: 1.1rem; }
+        .contact-email a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.2s; }
+        .contact-email a:hover { border-color: var(--link); }
+        .nectary { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }
+        footer { border-top: 1px solid var(--border); padding: 3rem 2rem; text-align: center; }
+        .footer-inner { max-width: 780px; margin: 0 auto; }
+        .footer-logo { font-family: var(--font-heading); font-size: 1.2rem; color: var(--text); margin-bottom: 0.5rem; }
+        .footer-tagline { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; list-style: none; flex-wrap: wrap; }
+        .footer-links a { font-size: 0.85rem; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+        .footer-links a.active { color: var(--accent); }
+        .footer-links a:hover { color: var(--accent); }
+        @media (max-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 6rem; min-height: auto; }
+            .hero-image { order: -1; }
+            .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(234,228,227,0.97); backdrop-filter: blur(10px); flex-direction: column; padding: 1.5rem 2rem; gap: 1.2rem; border-bottom: 1px solid var(--border); }
+            .nav-links.open { display: flex; }
+            .hamburger { display: block; }
+            .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .hamburger.open span:nth-child(2) { opacity: 0; }
+            .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+            section { padding: 3.5rem 1.5rem; }
+            section:first-child { padding-top: 6rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Deeply Slow</h1>
-    Coming Soon!
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a class="nav-logo" data-page="home">Deeply Slow Travel</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a data-page="home" data-i18n="nav.home" class="active">Home</a></li>
+                <li><a data-page="about" data-i18n="nav.about">About</a></li>
+                <li><a data-page="experience" data-i18n="nav.experience">The Experience</a></li>
+                <li><a data-page="lisbon" data-i18n="nav.lisbon">Lisbon Companion</a></li>
+                <li><a data-page="contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-switch" id="langSwitch">
+                    <a data-lang="en" class="active">EN</a>
+                    <span>|</span>
+                    <a data-lang="pt">PT</a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nectary" aria-hidden="true" tabindex="-1"><a href="mailto:contact@deeplyslow.com">contact@deeplyslow.com</a></div>
+
+    <div class="page active" id="page-home">
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <h1>Deeply Slow Travel</h1>
+                    <p class="tagline" data-i18n="home.hero.tagline1">A different way to experience a city.</p>
+                    <p class="tagline" data-i18n="home.hero.tagline2">Not by seeing more &#x2014;<br>but by seeing better.</p>
+                    <a class="cta cta-arrow" data-page="lisbon" data-i18n="home.hero.cta">Discover Lisbon Companion</a>
+                </div>
+                <div class="hero-image">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/ship-illustration-v1-1024.jpg">
+                        <img src="img/ship-illustration-v1-2048.jpg" alt="Illustrated ship at sea" width="520" height="520">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="home.whatis.title">What This Is</h2>
+            <p class="lead" data-i18n="home.whatis.lead">When you travel, you often move from place to place.</p>
+            <p data-i18n="home.whatis.p1">You follow maps.<br>You check recommendations.<br>You try not to miss anything.</p>
+            <p data-i18n="home.whatis.p2">But once you&#x2019;re there, something is missing.</p>
+            <p data-i18n="home.whatis.p3">No one really shows you <em>how</em> to experience what you&#x2019;re seeing.</p>
+            <p data-i18n="home.whatis.p4">That&#x2019;s what Deeply Slow Travel is for.</p>
+        </section>
+        <section>
+            <h2 data-i18n="home.wedo.title">What We Do</h2>
+            <p class="lead" data-i18n="home.wedo.lead">We create guided walking experiences that help you:</p>
+            <ul class="feature-list">
+                <li data-i18n="home.wedo.li1">notice more</li>
+                <li data-i18n="home.wedo.li2">understand what you&#x2019;re seeing</li>
+                <li data-i18n="home.wedo.li3">feel more connected to each place</li>
+            </ul>
+            <p style="margin-top:1.5rem;" data-i18n="home.wedo.after">Not by adding more information,<br>but by guiding your attention.</p>
+        </section>
+        <section>
+            <h2 data-i18n="home.how.title">How It Works</h2>
+            <p class="lead" data-i18n="home.how.lead">Each experience is designed to be used as you walk.</p>
+            <p data-i18n="home.how.p1">You listen.<br>You look again.<br>You notice something you would have missed.<br>You take a moment to reflect.</p>
+            <p data-i18n="home.how.p2">That&#x2019;s it.</p>
+            <div class="separator"></div>
+            <h3 data-i18n="home.how.cta_heading">Experience Lisbon differently</h3>
+            <a class="cta cta-arrow" data-page="lisbon" data-i18n="home.how.cta">Explore Lisbon Companion</a>
+        </section>
+    </div>
+
+    <div class="page" id="page-about">
+        <section>
+            <h1 data-i18n="about.title">About</h1>
+            <p class="lead" data-i18n="about.lead">Deeply Slow Travel started from a simple observation:</p>
+            <p data-i18n="about.p1">Even in beautiful places, it&#x2019;s easy to move through them without really experiencing them.</p>
+            <p data-i18n="about.p2">There is plenty of information &#x2014;<br>but very little guidance on how to engage with it.</p>
+            <div class="section-image">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/ale-in-lisbon-v1-1024.jpg">
+                    <img src="img/ale-in-lisbon-v1-2048.jpg" alt="Alessandra in Lisbon" width="1200" height="900">
+                </picture>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="about.idea.title">Our Idea</h2>
+            <p class="lead" data-i18n="about.idea.lead">We believe that small moments, when experienced with attention, can be more meaningful than trying to see everything.</p>
+            <p data-i18n="about.idea.p1">So we design experiences that help you slow down &#x2014;<br>not in time, but in awareness.</p>
+        </section>
+        <section>
+            <div class="separator"></div>
+            <p class="founders" data-i18n="about.founders">Created by Alessandra Velho.</p>
+        </section>
+    </div>
+
+    <div class="page" id="page-experience">
+        <section>
+            <h1 data-i18n="exp.title">The Experience</h1>
+            <h2 data-i18n="exp.structure.title">A Simple Structure</h2>
+            <p class="lead" data-i18n="exp.structure.lead">Each walk follows the same idea:</p>
+            <div class="walk-step"><strong data-i18n="exp.step1.title">A short story</strong><p data-i18n="exp.step1.desc">to help you understand where you are</p></div>
+            <div class="walk-step"><strong data-i18n="exp.step2.title">A detail to notice</strong><p data-i18n="exp.step2.desc">something most people overlook</p></div>
+            <div class="walk-step"><strong data-i18n="exp.step3.title">A prompt</strong><p data-i18n="exp.step3.desc">to guide your attention</p></div>
+            <div class="walk-step"><strong data-i18n="exp.step4.title">A moment to reflect</strong><p data-i18n="exp.step4.desc">your own experience</p></div>
+        </section>
+        <section>
+            <h2 data-i18n="exp.changes.title">What Changes</h2>
+            <p class="lead" data-i18n="exp.changes.lead">You don&#x2019;t just pass through a place.</p>
+            <p data-i18n="exp.changes.p1">You engage with it.</p>
+            <p data-i18n="exp.changes.p2">You start to see more,<br>and remember more.</p>
+        </section>
+    </div>
+
+    <div class="page" id="page-lisbon">
+        <section>
+            <h1 data-i18n="lisbon.title">Lisbon Companion</h1>
+            <p class="lead" data-i18n="lisbon.lead">Our first experience.</p>
+            <p data-i18n="lisbon.p1">A set of guided walks across Lisbon.</p>
+            <div class="section-image">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/carreira-no-28-v1-1024.jpg">
+                    <img src="img/carreira-no-28-v1-2048.jpg" alt="Carreira no. 28 tram in Lisbon" width="1200" height="900">
+                </picture>
+            </div>
+        </section>
+        <section>
+            <h2 data-i18n="lisbon.get.title">What You Get</h2>
+            <ul class="feature-list">
+                <li data-i18n="lisbon.get.li1">Carefully designed walking routes</li>
+                <li data-i18n="lisbon.get.li2">Audio you can listen to as you walk</li>
+                <li data-i18n="lisbon.get.li3">Short, clear stories about each place</li>
+                <li data-i18n="lisbon.get.li4">Prompts that help you notice more</li>
+                <li data-i18n="lisbon.get.li5">A simple way to record your thoughts</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-i18n="lisbon.practice.title">In Practice</h2>
+            <p class="lead" data-i18n="lisbon.practice.lead">You arrive at a square.</p>
+            <p data-i18n="lisbon.practice.p1">At first, it&#x2019;s just movement &#x2014; people, sounds, passing moments.</p>
+            <p data-i18n="lisbon.practice.p2">You listen to a short audio.</p>
+            <p data-i18n="lisbon.practice.p3">You learn something that isn&#x2019;t visible anymore.</p>
+            <p data-i18n="lisbon.practice.p4">You are invited to look again.</p>
+            <p data-i18n="lisbon.practice.p5">And suddenly, the place feels different.</p>
+            <div class="separator"></div>
+            <a class="cta cta-arrow" data-page="contact" data-i18n="lisbon.practice.cta">Discover Lisbon Companion</a>
+        </section>
+    </div>
+
+    <div class="page" id="page-contact">
+        <section>
+            <h1 data-i18n="contact.title">Contact</h1>
+            <p class="lead" data-i18n="contact.lead">If you&#x2019;d like to know more:</p>
+            <p class="contact-email"><a id="emailLink" href="#contact"></a></p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Deeply Slow Travel</div>
+            <p class="footer-tagline">Travel slowly. Live deeply.</p>
+            <ul class="footer-links">
+                <li><a data-page="home" data-i18n="nav.home">Home</a></li>
+                <li><a data-page="about" data-i18n="nav.about">About</a></li>
+                <li><a data-page="experience" data-i18n="nav.experience">The Experience</a></li>
+                <li><a data-page="lisbon" data-i18n="nav.lisbon">Lisbon Companion</a></li>
+                <li><a data-page="contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+    (function () {
+        'use strict';
+        /** @type {Record<string, Record<string, string>>} */
+        var T = {
+            en: {
+                'nav.home':'Home','nav.about':'About','nav.experience':'The Experience','nav.lisbon':'Lisbon Companion','nav.contact':'Contact',
+                'home.hero.tagline1':'A different way to experience a city.',
+                'home.hero.tagline2':'Not by seeing more \u2014<br>but by seeing better.',
+                'home.hero.cta':'Discover Lisbon Companion',
+                'home.whatis.title':'What This Is',
+                'home.whatis.lead':'When you travel, you often move from place to place.',
+                'home.whatis.p1':'You follow maps.<br>You check recommendations.<br>You try not to miss anything.',
+                'home.whatis.p2':'But once you\u2019re there, something is missing.',
+                'home.whatis.p3':'No one really shows you <em>how</em> to experience what you\u2019re seeing.',
+                'home.whatis.p4':'That\u2019s what Deeply Slow Travel is for.',
+                'home.wedo.title':'What We Do',
+                'home.wedo.lead':'We create guided walking experiences that help you:',
+                'home.wedo.li1':'notice more',
+                'home.wedo.li2':'understand what you\u2019re seeing',
+                'home.wedo.li3':'feel more connected to each place',
+                'home.wedo.after':'Not by adding more information,<br>but by guiding your attention.',
+                'home.how.title':'How It Works',
+                'home.how.lead':'Each experience is designed to be used as you walk.',
+                'home.how.p1':'You listen.<br>You look again.<br>You notice something you would have missed.<br>You take a moment to reflect.',
+                'home.how.p2':'That\u2019s it.',
+                'home.how.cta_heading':'Experience Lisbon differently',
+                'home.how.cta':'Explore Lisbon Companion',
+                'about.title':'About',
+                'about.lead':'Deeply Slow Travel started from a simple observation:',
+                'about.p1':'Even in beautiful places, it\u2019s easy to move through them without really experiencing them.',
+                'about.p2':'There is plenty of information \u2014<br>but very little guidance on how to engage with it.',
+                'about.idea.title':'Our Idea',
+                'about.idea.lead':'We believe that small moments, when experienced with attention, can be more meaningful than trying to see everything.',
+                'about.idea.p1':'So we design experiences that help you slow down \u2014<br>not in time, but in awareness.',
+                'about.founders':'Created by Alessandra Velho.',
+                'exp.title':'The Experience',
+                'exp.structure.title':'A Simple Structure',
+                'exp.structure.lead':'Each walk follows the same idea:',
+                'exp.step1.title':'A short story','exp.step1.desc':'to help you understand where you are',
+                'exp.step2.title':'A detail to notice','exp.step2.desc':'something most people overlook',
+                'exp.step3.title':'A prompt','exp.step3.desc':'to guide your attention',
+                'exp.step4.title':'A moment to reflect','exp.step4.desc':'your own experience',
+                'exp.changes.title':'What Changes',
+                'exp.changes.lead':'You don\u2019t just pass through a place.',
+                'exp.changes.p1':'You engage with it.',
+                'exp.changes.p2':'You start to see more,<br>and remember more.',
+                'lisbon.title':'Lisbon Companion',
+                'lisbon.lead':'Our first experience.',
+                'lisbon.p1':'A set of guided walks across Lisbon.',
+                'lisbon.get.title':'What You Get',
+                'lisbon.get.li1':'Carefully designed walking routes',
+                'lisbon.get.li2':'Audio you can listen to as you walk',
+                'lisbon.get.li3':'Short, clear stories about each place',
+                'lisbon.get.li4':'Prompts that help you notice more',
+                'lisbon.get.li5':'A simple way to record your thoughts',
+                'lisbon.practice.title':'In Practice',
+                'lisbon.practice.lead':'You arrive at a square.',
+                'lisbon.practice.p1':'At first, it\u2019s just movement \u2014 people, sounds, passing moments.',
+                'lisbon.practice.p2':'You listen to a short audio.',
+                'lisbon.practice.p3':'You learn something that isn\u2019t visible anymore.',
+                'lisbon.practice.p4':'You are invited to look again.',
+                'lisbon.practice.p5':'And suddenly, the place feels different.',
+                'lisbon.practice.cta':'Discover Lisbon Companion',
+                'contact.title':'Contact',
+                'contact.lead':'If you\u2019d like to know more:'
+            },
+            pt: {
+                'nav.home':'Home','nav.about':'Sobre','nav.experience':'A Experi\u00eancia','nav.lisbon':'Lisbon Companion','nav.contact':'Contato',
+                'home.hero.tagline1':'Uma forma diferente de viver uma cidade.',
+                'home.hero.tagline2':'N\u00e3o vendo mais \u2014<br>mas vendo melhor.',
+                'home.hero.cta':'Descubra o Lisbon Companion',
+                'home.whatis.title':'O que \u00e9 isso',
+                'home.whatis.lead':'Quando voc\u00ea viaja, normalmente vai de um lugar para outro.',
+                'home.whatis.p1':'Segue mapas.<br>Confere recomenda\u00e7\u00f5es.<br>Tenta n\u00e3o perder nada.',
+                'home.whatis.p2':'Mas, quando voc\u00ea chega, algo falta.',
+                'home.whatis.p3':'Ningu\u00e9m realmente mostra <em>como</em> viver o que voc\u00ea est\u00e1 vendo.',
+                'home.whatis.p4':'\u00c9 para isso que existe o Deeply Slow Travel.',
+                'home.wedo.title':'O que fazemos',
+                'home.wedo.lead':'Criamos experi\u00eancias guiadas a p\u00e9 que ajudam voc\u00ea a:',
+                'home.wedo.li1':'perceber mais',
+                'home.wedo.li2':'entender melhor o que est\u00e1 vendo',
+                'home.wedo.li3':'se conectar de forma mais profunda com cada lugar',
+                'home.wedo.after':'N\u00e3o adicionando mais informa\u00e7\u00e3o,<br>mas orientando a sua aten\u00e7\u00e3o.',
+                'home.how.title':'Como funciona',
+                'home.how.lead':'Cada experi\u00eancia foi pensada para ser usada enquanto voc\u00ea caminha.',
+                'home.how.p1':'Voc\u00ea escuta.<br>Olha de novo.<br>Percebe algo que teria passado despercebido.<br>Faz uma pausa para refletir.',
+                'home.how.p2':'S\u00f3 isso.',
+                'home.how.cta_heading':'Viva Lisboa de forma diferente',
+                'home.how.cta':'Explore o Lisbon Companion',
+                'about.title':'Sobre',
+                'about.lead':'O Deeply Slow Travel nasceu de uma observa\u00e7\u00e3o simples:',
+                'about.p1':'Mesmo em lugares lindos, \u00e9 f\u00e1cil passar por eles sem realmente viv\u00ea-los.',
+                'about.p2':'Existe muita informa\u00e7\u00e3o \u2014<br>mas pouca orienta\u00e7\u00e3o sobre como se relacionar com ela.',
+                'about.idea.title':'Nossa ideia',
+                'about.idea.lead':'Acreditamos que pequenos momentos, quando vividos com aten\u00e7\u00e3o, podem ser mais significativos do que tentar ver tudo.',
+                'about.idea.p1':'Por isso, criamos experi\u00eancias que ajudam voc\u00ea a desacelerar \u2014<br>n\u00e3o no tempo, mas na forma de perceber.',
+                'about.founders':'Criado por Alessandra Velho.',
+                'exp.title':'A Experi\u00eancia',
+                'exp.structure.title':'Uma estrutura simples',
+                'exp.structure.lead':'Cada percurso segue a mesma l\u00f3gica:',
+                'exp.step1.title':'Uma breve hist\u00f3ria','exp.step1.desc':'para ajudar voc\u00ea a entender onde est\u00e1',
+                'exp.step2.title':'Um detalhe a observar','exp.step2.desc':'algo que a maioria das pessoas n\u00e3o percebe',
+                'exp.step3.title':'Um convite \u00e0 observa\u00e7\u00e3o','exp.step3.desc':'para orientar sua aten\u00e7\u00e3o',
+                'exp.step4.title':'Um momento de reflex\u00e3o','exp.step4.desc':'a sua pr\u00f3pria experi\u00eancia',
+                'exp.changes.title':'O que muda',
+                'exp.changes.lead':'Voc\u00ea n\u00e3o apenas passa por um lugar.',
+                'exp.changes.p1':'Voc\u00ea se envolve com ele.',
+                'exp.changes.p2':'Come\u00e7a a ver mais<br>e a lembrar mais.',
+                'lisbon.title':'Lisbon Companion',
+                'lisbon.lead':'Nossa primeira experi\u00eancia.',
+                'lisbon.p1':'Um conjunto de percursos guiados por Lisboa.',
+                'lisbon.get.title':'O que voc\u00ea encontra',
+                'lisbon.get.li1':'Percursos a p\u00e9 cuidadosamente desenhados',
+                'lisbon.get.li2':'\u00c1udios para ouvir enquanto caminha',
+                'lisbon.get.li3':'Hist\u00f3rias curtas e claras sobre cada lugar',
+                'lisbon.get.li4':'Convites que ajudam voc\u00ea a perceber mais',
+                'lisbon.get.li5':'Um espa\u00e7o simples para registrar suas impress\u00f5es',
+                'lisbon.practice.title':'Na pr\u00e1tica',
+                'lisbon.practice.lead':'Voc\u00ea chega a uma pra\u00e7a.',
+                'lisbon.practice.p1':'\u00c0 primeira vista, \u00e9 s\u00f3 movimento \u2014 pessoas, sons, passagens r\u00e1pidas.',
+                'lisbon.practice.p2':'Voc\u00ea escuta um \u00e1udio curto.',
+                'lisbon.practice.p3':'Descobre algo que j\u00e1 n\u00e3o est\u00e1 mais vis\u00edvel.',
+                'lisbon.practice.p4':'\u00c9 convidado a olhar novamente.',
+                'lisbon.practice.p5':'E, de repente, o lugar muda.',
+                'lisbon.practice.cta':'Descubra o Lisbon Companion',
+                'contact.title':'Contato',
+                'contact.lead':'Se quiser saber mais:'
+            }
+        };
+        /** @type {Record<string, Record<string, string>>} */
+        var slugs = {
+            en: { home:'', about:'about', experience:'experience', lisbon:'lisbon', contact:'contact' },
+            pt: { home:'', about:'sobre', experience:'experiencia', lisbon:'lisbon', contact:'contato' }
+        };
+        /** @type {Record<string, Record<string, string>>} */
+        var reverseSlug = {
+            en: { '':'home', 'about':'about', 'experience':'experience', 'lisbon':'lisbon', 'contact':'contact' },
+            pt: { '':'home', 'sobre':'about', 'experiencia':'experience', 'lisbon':'lisbon', 'contato':'contact' }
+        };
+        /** @type {HTMLElement} */
+        var navbar = document.getElementById('navbar');
+        /** @type {HTMLElement} */
+        var navLinks = document.getElementById('navLinks');
+        /** @type {HTMLButtonElement} */
+        var hamburger = document.getElementById('hamburger');
+        /** @type {HTMLElement} */
+        var langSwitch = document.getElementById('langSwitch');
+        /** @type {NodeListOf<HTMLElement>} */
+        var pages = document.querySelectorAll('.page');
+        /** @type {NodeListOf<HTMLAnchorElement>} */
+        var navLinkItems = navLinks.querySelectorAll('a[data-page]');
+        /** @type {NodeListOf<HTMLAnchorElement>} */
+        var footerLinkItems = document.querySelectorAll('.footer-links a[data-page]');
+        /** @type {string} */
+        var currentLang = 'en';
+        /** @type {string} */
+        var currentPage = 'home';
+
+        /* Email obfuscation: the address hides in a fruit bowl.
+           Each emoji maps to a character. Bots see only fruit salad. */
+        /** @type {string} */
+        var fruitBowl = '\uD83C\uDF6F\uD83C\uDF3F\uD83C\uDF4B\uD83C\uDF4B\uD83C\uDF4A\uD83D\uDD25\uD83C\uDF47\uD83C\uDF3F\uD83C\uDF3F\uD83C\uDF50\uD83C\uDF4B\uD83C\uDF3D\uD83C\uDF53\uD83C\uDF4B\uD83C\uDF4A\uD83C\uDF51\uD83E\uDD5D\uD83C\uDF52\uD83C\uDF4A\uD83C\uDF44';
+        /** @type {Record<string, string>} */
+        var cookbook = {
+            '\uD83C\uDF6F':'h','\uD83C\uDF3F':'e','\uD83C\uDF4B':'l',
+            '\uD83C\uDF4A':'o','\uD83D\uDD25':'@','\uD83C\uDF47':'d',
+            '\uD83C\uDF50':'p','\uD83C\uDF3D':'y','\uD83C\uDF53':'s',
+            '\uD83C\uDF51':'w','\uD83E\uDD5D':'.','\uD83C\uDF52':'c',
+            '\uD83C\uDF44':'m'
+        };
+        /**
+         * Decode the fruit bowl into a readable string.
+         * @param {string} bowl
+         * @returns {string}
+         */
+        function peel(bowl) {
+            var chars = Array.from(bowl);
+            var result = '';
+            for (var i = 0; i < chars.length; i++) { result += cookbook[chars[i]] || ''; }
+            return result;
+        }
+        /** @type {string} */
+        var decodedEmail = peel(fruitBowl);
+        /** @type {HTMLAnchorElement} */
+        var emailLink = document.getElementById('emailLink');
+        emailLink.textContent = decodedEmail;
+        emailLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'mai' + 'lto' + ':' + decodedEmail;
+        });
+
+        /**
+         * Apply translations for the given language.
+         * @param {string} lang
+         * @returns {void}
+         */
+        function applyTranslations(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (T[lang] && T[lang][key] !== undefined) el.innerHTML = T[lang][key];
+            });
+            document.documentElement.lang = lang;
+        }
+        /**
+         * Set the active language, update UI and URL.
+         * @param {string} lang
+         * @param {boolean} [updateUrl=true]
+         * @returns {void}
+         */
+        function setLang(lang, updateUrl) {
+            if (updateUrl === undefined) updateUrl = true;
+            currentLang = lang;
+            applyTranslations(lang);
+            langSwitch.querySelectorAll('a').forEach(function (a) {
+                a.classList.toggle('active', a.getAttribute('data-lang') === lang);
+            });
+            if (updateUrl) buildAndPushUrl(currentPage, true);
+        }
+        /**
+         * Build URL hash and push or replace state.
+         * @param {string} pageId
+         * @param {boolean} push
+         * @returns {void}
+         */
+        function buildAndPushUrl(pageId, push) {
+            var slug = slugs[currentLang][pageId] || '';
+            var hash = slug ? currentLang + '/' + slug : currentLang;
+            if (push) history.pushState({ lang: currentLang, page: pageId }, '', '#' + hash);
+            else history.replaceState({ lang: currentLang, page: pageId }, '', '#' + hash);
+        }
+        /**
+         * Navigate to a page by canonical id.
+         * @param {string} pageId
+         * @param {boolean} [pushState=true]
+         * @returns {void}
+         */
+        function navigateTo(pageId, pushState) {
+            if (pushState === undefined) pushState = true;
+            var target = document.getElementById('page-' + pageId);
+            if (!target) return;
+            currentPage = pageId;
+            pages.forEach(function (p) { p.classList.remove('active'); });
+            target.classList.add('active');
+            navLinkItems.forEach(function (a) {
+                a.classList.toggle('active', a.getAttribute('data-page') === pageId);
+            });
+            footerLinkItems.forEach(function (a) {
+                a.classList.toggle('active', a.getAttribute('data-page') === pageId);
+            });
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            if (pushState) buildAndPushUrl(pageId, true);
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+        }
+        /**
+         * Parse URL hash into lang and page.
+         * @returns {{ lang: string, page: string }}
+         */
+        function parseHash() {
+            var hash = window.location.hash.slice(1);
+            if (!hash) return { lang: '', page: '' };
+            var parts = hash.split('/');
+            var lang = parts[0];
+            if (lang !== 'en' && lang !== 'pt') return { lang: '', page: '' };
+            var slug = parts[1] || '';
+            var page = (reverseSlug[lang] && reverseSlug[lang][slug]) || 'home';
+            return { lang: lang, page: page };
+        }
+        /**
+         * Detect browser language preference.
+         * @returns {string}
+         */
+        function detectLang() {
+            var nav = navigator.language || navigator.userLanguage || 'en';
+            return /^pt\b/i.test(nav) ? 'pt' : 'en';
+        }
+
+        document.addEventListener('click', function (e) {
+            var anchor = e.target.closest('[data-page]');
+            if (anchor) { e.preventDefault(); var page = anchor.getAttribute('data-page'); if (page) navigateTo(page); }
+        });
+        langSwitch.addEventListener('click', function (e) {
+            var anchor = e.target.closest('[data-lang]');
+            if (anchor) { var lang = anchor.getAttribute('data-lang'); if (lang && lang !== currentLang) setLang(lang); }
+        });
+        hamburger.addEventListener('click', function () { navLinks.classList.toggle('open'); hamburger.classList.toggle('open'); });
+        window.addEventListener('scroll', function () { navbar.classList.toggle('scrolled', window.scrollY > 10); });
+        window.addEventListener('popstate', function (e) {
+            if (e.state && e.state.lang && e.state.page) {
+                currentLang = e.state.lang;
+                applyTranslations(currentLang);
+                langSwitch.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-lang') === currentLang); });
+                navigateTo(e.state.page, false);
+            } else {
+                var parsed = parseHash();
+                if (parsed.lang) { setLang(parsed.lang, false); navigateTo(parsed.page, false); }
+            }
+        });
+
+        /** @type {{ lang: string, page: string }} */
+        var initial = parseHash();
+        if (!initial.lang) {
+            var detected = detectLang();
+            currentLang = detected;
+            applyTranslations(detected);
+            langSwitch.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-lang') === detected); });
+            navigateTo('home', false);
+            buildAndPushUrl('home', false);
+        } else {
+            currentLang = initial.lang;
+            applyTranslations(initial.lang);
+            langSwitch.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-lang') === initial.lang); });
+            navigateTo(initial.page, false);
+            buildAndPushUrl(initial.page, false);
+        }
+    })();
+    </script>
 </body>
 </html>
