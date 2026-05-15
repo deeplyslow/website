@@ -304,6 +304,19 @@
       border-color: var(--text-secondary);
     }
 
+    .partners-overview-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .partners-overview-actions .cta {
+      flex: 1 1 18rem;
+      margin-top: 0;
+      text-align: center;
+    }
+
     .feature-list {
       list-style: none;
       padding: 0;
@@ -585,6 +598,15 @@
         margin-top: 0.75rem;
         display: inline-block;
       }
+
+      .partners-overview-actions {
+        flex-direction: column;
+      }
+
+      .partners-overview-actions .cta {
+        flex: 0 0 auto;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -626,7 +648,7 @@
         <div class="hero-text">
           <h1 data-i18n="home.hero.title">Deeply Slow Travel</h1>
           <p class="tagline" data-i18n="home.hero.tagline1">A different way to experience a city.</p>
-          <p class="tagline" data-i18n="home.hero.tagline2">Not by seeing more —<br>but by seeing better.</p>
+          <p class="tagline" data-i18n="home.hero.tagline2">Not by seeing more —<br>but by noticing more.</p>
           <a class="cta cta-arrow" data-page="demo" data-i18n="home.hero.cta">See it in practice</a>
         </div>
         <div class="hero-image">
@@ -640,43 +662,43 @@
     <div class="audience-grid">
       <div class="audience-card">
         <span class="audience-card-label" data-i18n="home.aud.traveller.label">For Travellers</span>
-        <h3 data-i18n="home.aud.traveller.title">Experience Lisbon the way most people never do.</h3>
-        <p data-i18n="home.aud.traveller.desc">A curated walking companion that reveals the invisible layer beneath the
-          city — guiding your attention, not just your direction.</p>
-        <a class="cta cta-arrow" data-page="lisbon" data-i18n="home.aud.traveller.cta">Explore Lisbon Companion</a>
+        <h3 data-i18n="home.aud.traveller.title">Discover Lisbon in a way most people never truly do.</h3>
+        <p data-i18n="home.aud.traveller.desc">Carefully guided walks that reveal the invisible layers of the city —
+          helping you notice what almost everyone else walks past.</p>
+        <a class="cta cta-arrow" data-page="lisbon" data-i18n="home.aud.traveller.cta">Explore the Lisbon Companion</a>
       </div>
       <div class="audience-card">
         <span class="audience-card-label" data-i18n="home.aud.hotels.label">For Boutique Hotels</span>
-        <h3 data-i18n="home.aud.hotels.title">Your brand, present even when your guest explores alone.</h3>
-        <p data-i18n="home.aud.hotels.desc">Extend your hospitality beyond the property — without adding operational
-          complexity. A curated guest experience, ready to offer from day one.</p>
-        <a class="cta cta-arrow" data-page="partners" data-i18n="home.aud.hotels.cta">Learn about the pilot</a>
+        <h3 data-i18n="home.aud.hotels.title">Your hotel's presence continues — even when guests leave to explore the city.</h3>
+        <p data-i18n="home.aud.hotels.desc">Extend the feeling of care, continuity, and attention beyond your doors —
+          without increasing operational complexity.</p>
+        <a class="cta cta-arrow" data-page="partners" data-i18n="home.aud.hotels.cta">Learn how it works</a>
       </div>
       <div class="audience-card">
         <span class="audience-card-label" data-i18n="home.aud.agencies.label">For Luxury Travel Agencies</span>
-        <h3 data-i18n="home.aud.agencies.title">Turn the free afternoon into the most memorable part of the trip.</h3>
-        <p data-i18n="home.aud.agencies.desc">A curated editorial presence that accompanies your client during
-          independent exploration — without a guide, without extra cost.</p>
-        <a class="cta cta-arrow" data-page="partners" data-i18n="home.aud.agencies.cta">Explore the partnership</a>
+        <h3 data-i18n="home.aud.agencies.title">Turn unstructured time into one of the most memorable parts of the journey.</h3>
+        <p data-i18n="home.aud.agencies.desc">A carefully crafted editorial experience designed to accompany your
+          clients during independent exploration — without guides, additional logistics, or operational burden.</p>
+        <a class="cta cta-arrow" data-page="partners" data-i18n="home.aud.agencies.cta">Explore partnership opportunities</a>
       </div>
     </div>
     <section>
       <h2 data-i18n="home.whatis.title">What This Is</h2>
-      <p class="lead" data-i18n="home.whatis.lead">When you travel, you often move from place to place.</p>
-      <p data-i18n="home.whatis.p1">You follow maps.<br>You check recommendations.<br>You try not to miss anything.</p>
-      <p data-i18n="home.whatis.p2">But once you're there, something is missing.</p>
-      <p data-i18n="home.whatis.p3">No one really shows you <em>how</em> to experience what you're seeing.</p>
-      <p data-i18n="home.whatis.p4">That's what Deeply Slow Travel is for.</p>
+      <p class="lead" data-i18n="home.whatis.lead">When we travel, we constantly move from one place to another.</p>
+      <p data-i18n="home.whatis.p1">We follow maps.<br>We check recommendations.<br>We try not to miss anything.</p>
+      <p data-i18n="home.whatis.p2">But once we arrive, something often feels absent.</p>
+      <p data-i18n="home.whatis.p3">Very few people actually show us how to look at what we are seeing.</p>
+      <p data-i18n="home.whatis.p4">That is where Deeply Slow Travel begins.</p>
     </section>
     <section>
       <h2 data-i18n="home.how.title">How It Works</h2>
-      <p class="lead" data-i18n="home.how.lead">Each experience is designed to be used as you walk — accessible via
-        link, with no download required.</p>
-      <p data-i18n="home.how.p1">You arrive at a square.<br>You are invited to observe its rhythm.<br>A hidden layer of
-        history surfaces beneath the ordinary.<br>You look again. The place becomes different.</p>
-      <p data-i18n="home.how.p2">That is The Invisible Layer™.</p>
+      <p class="lead" data-i18n="home.how.lead">Each experience is designed to be lived while walking — accessible through a simple link, with no app download required.</p>
+      <p data-i18n="home.how.p1">You arrive at a square.</p>
+      <p data-i18n="home.how.p2">The experience invites you to pause and notice the rhythm of the place.</p>
+      <p data-i18n="home.how.p3">Slowly, a hidden layer of history begins to emerge beneath the ordinary.</p>
+      <p data-i18n="home.how.p4">You look again. And the place changes.</p>
+      <p data-i18n="home.how.p5">That is what we call The Invisible Layer™.</p>
       <div class="separator"></div>
-      <h3 data-i18n="home.how.cta_heading">Experience Lisbon differently</h3>
       <a class="cta cta-arrow" data-page="demo" data-i18n="home.how.cta">See a live example</a>
     </section>
   </div>
@@ -685,12 +707,12 @@
   <div class="page" id="page-about">
     <section>
       <h1 data-i18n="about.title">About</h1>
-      <p class="lead" data-i18n="about.lead">Deeply Slow Travel was not designed in an office.</p>
-      <p data-i18n="about.p1">It was shaped on the streets of Lisbon — through years of walking, observing, and guiding.
-      </p>
-      <p data-i18n="about.p2">It comes from the understanding that travel is often reduced to a checklist, while the
-        real city reveals itself in the pauses. In the way light moves across a façade. In the rhythm of a square. In
-        what remains unnoticed.</p>
+      <p class="lead" data-i18n="about.lead">Deeply Slow Travel began with years of walking through Lisbon without hurrying.</p>
+      <p data-i18n="about.p1">Not collecting attractions.</p>
+      <p data-i18n="about.p2">Not trying to &quot;cover&quot; the city.</p>
+      <p data-i18n="about.p3">Just paying attention.</p>
+      <p data-i18n="about.p4">Certain places kept revealing themselves slowly — through light, rhythm, silence,
+        repetition, and small details most people passed without noticing.</p>
       <div class="section-image">
         <picture>
           <source media="(max-width: 768px)" srcset="img/ale-in-lisbon-v1-1024.jpg">
@@ -699,17 +721,20 @@
       </div>
     </section>
     <section>
-      <h2 data-i18n="about.idea.title">The Idea</h2>
-      <p class="lead" data-i18n="about.idea.lead">We believe that small moments, when experienced with attention, can be
-        more meaningful than trying to see everything.</p>
-      <p data-i18n="about.idea.p1">So we design experiences that help you slow down —<br>not in time, but in awareness.
-      </p>
-      <p data-i18n="about.idea.p2">The defensible asset here is not technology. It is curated perception — built over
-        years, not generated in seconds.</p>
+      <p data-i18n="about.p5">Over time, I realised that what I was searching for in travel was not more information.</p>
+      <p data-i18n="about.p6">It was a different quality of attention.</p>
+      <p data-i18n="about.p7">Deeply Slow Travel grew from that idea.</p>
+      <p data-i18n="about.p8">The project combines walking, editorial storytelling, sensory observation, and
+        historical research to create experiences that help travellers experience cities more deeply — and more personally.</p>
+      <p data-i18n="about.p9">Every route is designed slowly, on foot, through repeated observation of how places
+        feel, change, sound, and reveal themselves over time.</p>
+      <p data-i18n="about.p10">Because meaningful travel rarely comes from seeing more.</p>
+      <p data-i18n="about.p11">It comes from learning how to notice differently.</p>
     </section>
     <section>
       <div class="separator"></div>
-      <p class="founders" data-i18n="about.founders">Created by Alessandra Velho.</p>
+      <p class="founders"><span data-i18n="about.founder.name">Alessandra Velho</span><br><span
+          data-i18n="about.founder.title">Founder &amp; Creative Director, Deeply Slow Travel</span></p>
     </section>
   </div>
 
@@ -717,41 +742,43 @@
   <div class="page" id="page-experience">
     <section>
       <h1 data-i18n="exp.title">The Experience</h1>
-      <h2 data-i18n="exp.structure.title">A Structured Framework</h2>
+      <h2 data-i18n="exp.structure.title">A Structured Journey</h2>
       <p class="lead" data-i18n="exp.structure.lead">Each walk follows the same carefully designed sequence — a
         dramaturgy of attention.</p>
       <div class="walk-step"><strong data-i18n="exp.step1.title">Sensory Anchor</strong>
         <p data-i18n="exp.step1.desc">The experience begins with atmosphere, rhythm, and bodily perception. The
-          traveller feels first. Interpretation arrives afterwards.</p>
+          traveller feels the place first. Interpretation comes afterwards.</p>
       </div>
       <div class="walk-step"><strong data-i18n="exp.step2.title">The Invisible Detail</strong>
-        <p data-i18n="exp.step2.desc">A hidden or overlooked element reframes the place. This is the core of The
-          Invisible Layer™.</p>
+        <p data-i18n="exp.step2.desc">A hidden or overlooked element completely reframes the place.<br>This is the heart
+          of The Invisible Layer™ — the moment most people walk past without ever noticing.</p>
       </div>
       <div class="walk-step"><strong data-i18n="exp.step3.title">Observation Prompt</strong>
-        <p data-i18n="exp.step3.desc">A specific act of attention: pause, compare, notice, look, listen. The traveller
-          becomes an active participant rather than a passive tourist.</p>
+        <p data-i18n="exp.step3.desc">A simple act of attention: pause, compare, notice, listen, look again.<br>The
+          traveller stops being a passive observer of the city and begins participating in it.</p>
       </div>
       <div class="walk-step"><strong data-i18n="exp.step4.title">Personal Notebook</strong>
-        <p data-i18n="exp.step4.desc">A lightweight space for reflections and personal discoveries. Within 24 hours, the
-          guest receives a curated archive of their walk — delivered quietly, as a lasting memory.</p>
+        <p data-i18n="exp.step4.desc">A private space for reflections and personal discoveries.<br>Within 24 hours,
+          each traveller receives a digital archive of the moments saved throughout the walk — delivered quietly, as a lasting memory.</p>
       </div>
     </section>
     <section>
       <h2 data-i18n="exp.layer.title">The Invisible Layer™</h2>
-      <p class="lead" data-i18n="exp.layer.lead">Most people walk through a city and see what is visible.</p>
-      <p data-i18n="exp.layer.p1">The Invisible Layer™ reveals what is not — the history beneath the stones, the detail
-        most people miss, the rhythm that only reveals itself to those who pause.</p>
-      <p data-i18n="exp.layer.p2">It is not more information. It is a different quality of attention.</p>
+      <p class="lead" data-i18n="exp.layer.lead">Most people move through a city seeing only what is visible.</p>
+      <p data-i18n="exp.layer.p1">The Invisible Layer™ reveals what usually remains hidden — the history beneath the
+        pavement, the details most people overlook, the rhythms that only emerge when someone slows down enough to notice them.</p>
+      <p data-i18n="exp.layer.p2">It is not more information.</p>
+      <p data-i18n="exp.layer.p3">It is a different quality of attention.</p>
       <div class="separator"></div>
       <a class="cta cta-arrow" data-page="demo" data-i18n="exp.cta">See it in practice</a>
     </section>
     <section>
-      <h2 data-i18n="exp.multi.title">Multiple Modes</h2>
-      <p data-i18n="exp.multi.p1">The experience adapts to different travel behaviours. The same content may be accessed
-        through audio, short-form reading, or minimal observation prompts.</p>
-      <p data-i18n="exp.multi.p2">Couples walking together. Urban noise. Different comfort levels with headphones. The
-        editorial core remains constant. Only the format adapts.</p>
+      <h2 data-i18n="exp.multi.title">Different Ways to Explore</h2>
+      <p data-i18n="exp.multi.p1">The experience naturally adapts to different ways of moving through the city.</p>
+      <p data-i18n="exp.multi.p2">The same walk may be experienced through audio, short-form reading, or small
+        observation prompts.</p>
+      <p data-i18n="exp.multi.p3">Couples walking together. Urban noise. People who prefer listening. Others who prefer reading.</p>
+      <p data-i18n="exp.multi.p4">The editorial core always remains the same. Only the format changes.</p>
     </section>
   </div>
 
@@ -759,71 +786,58 @@
   <div class="page" id="page-demo">
     <section>
       <h1 data-i18n="demo.title">The Invisible Layer™ — In Practice</h1>
-      <p class="lead" data-i18n="demo.lead">The following is a single moment from the Lisbon Companion — one stop,
-        experienced exactly as your guest would encounter it.</p>
-      <p data-i18n="demo.sublead">This is what The Invisible Layer™ looks like in practice.</p>
+      <p class="lead" data-i18n="demo.lead">What follows is a real moment from the Lisbon Companion — experienced exactly as it would unfold during the walk.</p>
     </section>
     <section>
       <div class="demo-step">
         <span class="demo-step-label" data-i18n="demo.step1.label">Step 1 — Arrive</span>
         <h3 data-i18n="demo.step1.title">Praça da Figueira, Lisbon.</h3>
-        <p data-i18n="demo.step1.p1">You are standing at the edge of one of Lisbon's busiest squares. Taxis cutting
-          corners. Tuk-tuks negotiating narrow gaps. Tour groups following coloured flags.</p>
+        <p data-i18n="demo.step1.p1">You are standing in one of the busiest squares in the city. Taxis cutting across
+          traffic. Tuk-tuks weaving through narrow gaps. Tour groups following coloured flags.</p>
         <p data-i18n="demo.step1.p2">Do not move yet.</p>
-        <p data-i18n="demo.step1.p3">Stand still for one minute. Let the movement happen around you. Notice the rhythm
-          of the square — not the noise, but the pattern beneath it. The way people cross without looking. The way the
-          pigeons know exactly when to move.</p>
-        <p data-i18n="demo.step1.p4">When you feel the rhythm, you are ready.</p>
+        <p data-i18n="demo.step1.p3">Stand still for a minute.</p>
+        <p data-i18n="demo.step1.p4">Let the movement happen around you. Notice the rhythm of the square — not the
+          noise itself, but the pattern beneath it. The way people cross without looking. The strangely choreographed movement of the pigeons.</p>
+        <p data-i18n="demo.step1.p5">When you feel that rhythm, continue.</p>
       </div>
       <div class="demo-step">
         <span class="demo-step-label" data-i18n="demo.step2.label">Step 2 — The Invisible Layer™</span>
-        <h3 data-i18n="demo.step2.title">Beneath this square is a city within a city.</h3>
-        <p data-i18n="demo.step2.p1">Beneath the ground you are standing on once stood Lisbon's largest medieval
-          hospital — the Hospital Real de Todos os Santos. Built in the fifteenth century, it had cloisters, wards,
-          chapels, and gardens. At its peak, it served thousands. It was, in its time, one of the most advanced medical
-          institutions in Europe.</p>
-        <p data-i18n="demo.step2.p2">On the morning of the 1st of November 1755 — All Saints' Day, when the churches
-          were full and the candles were lit — an earthquake struck Lisbon. The fires that followed lasted five days.
-          The hospital was destroyed entirely.</p>
-        <p data-i18n="demo.step2.p3">No plaque marks the site. No ruin is visible. The ground absorbed everything. The
-          city was rebuilt on top, and the square became what it is today — busy, ordinary, unremarkable to almost
-          everyone who crosses it.</p>
-        <p data-i18n="demo.step2.p4">Almost everyone.</p>
+        <h3 data-i18n="demo.step2.title">Beneath this square lies another city.</h3>
+        <p data-i18n="demo.step2.p1">Under your feet once stood Lisbon's largest medieval hospital — the Hospital Real
+          de Todos os Santos. Built in the fifteenth century, it contained cloisters, wards, chapels, and gardens. For centuries, it was one of Europe's most advanced medical institutions.</p>
+        <p data-i18n="demo.step2.p2">On the morning of 1 November 1755 — All Saints' Day — an earthquake struck Lisbon.
+          The fires that followed lasted five days.</p>
+        <p data-i18n="demo.step2.p3">The hospital disappeared completely.</p>
+        <p data-i18n="demo.step2.p4">Today there is no plaque. No visible ruin. No obvious sign of what once existed here.</p>
+        <p data-i18n="demo.step2.p5">The city was rebuilt over it.</p>
+        <p data-i18n="demo.step2.p6">And the square became simply another square.</p>
+        <p data-i18n="demo.step2.p7">For almost everyone.</p>
       </div>
       <div class="demo-step">
         <span class="demo-step-label" data-i18n="demo.step3.label">Step 3 — Your Observation</span>
         <h3 data-i18n="demo.step3.title">Now look down.</h3>
-        <p data-i18n="demo.step3.p1">The stone beneath your feet was laid over rubble, over ash, over what was once a
-          place of care for the sick and dying of medieval Lisbon.</p>
-        <p data-i18n="demo.step3.p2">The people crossing this square right now — the tourists, the commuters, the
-          delivery drivers — none of them know what they are walking on.</p>
-        <div class="demo-prompt">
-          <span class="demo-prompt-label" data-i18n="demo.step3.prompt.label">Your prompt</span>
-          <p data-i18n="demo.step3.prompt.text">What does it feel like to stand in a place where so much happened, and
-            where almost nothing remains? Not the history — the feeling. Stay with it for a moment before you move on.
-          </p>
-        </div>
+        <p data-i18n="demo.step3.p1">The stone beneath your feet was laid over ash, rubble, and centuries of invisible history.</p>
+        <p data-i18n="demo.step3.p2">The people crossing this square right now have no idea what once stood here.</p>
+        <p data-i18n="demo.step3.p3">And yet, somehow, it is all still present.</p>
+        <p data-i18n="demo.step3.p4">Stay with that thought for a few moments before moving on.</p>
       </div>
       <div class="demo-step">
         <span class="demo-step-label" data-i18n="demo.step4.label">Step 4 — Your Notebook</span>
         <h3 data-i18n="demo.step4.title">This moment belongs to you.</h3>
-        <p data-i18n="demo.step4.p1">In the Lisbon Companion, this is where your guest writes — not a review, not a
-          caption, but a personal impression. A single sentence. A word. Whatever surfaces.</p>
-        <p data-i18n="demo.step4.p2">These reflections are saved privately throughout the walk. Within 24 hours, your
-          guest receives a personal archive of everything they noticed — delivered quietly, under your name.</p>
-        <p data-i18n="demo.step4.p3">Not a receipt. Not a survey. A memory.</p>
+        <p data-i18n="demo.step4.p1">In the Lisbon Companion, this is where you write — not a review or a caption, but a personal impression.</p>
+        <p data-i18n="demo.step4.p2">A sentence. A word. Whatever surfaces.</p>
+        <p data-i18n="demo.step4.p3">Throughout the walk, these reflections are quietly saved.</p>
+        <p data-i18n="demo.step4.p4">Within 24 hours, you receive a personal archive containing everything you noticed along the way.</p>
+        <p data-i18n="demo.step4.p5">Not a receipt. Not a survey.</p>
+        <p data-i18n="demo.step4.p6">A memory.</p>
       </div>
     </section>
     <section>
       <div class="separator"></div>
-      <h2 data-i18n="demo.cta.title">This is one moment.<br>The full experience contains seven.</h2>
-      <p data-i18n="demo.cta.p1">Seven rhythms. Seven neighbourhoods. One coherent portrait of Lisbon that no map can
-        offer.</p>
-      <p data-i18n="demo.cta.p2">This is what your guests would experience. And this is what your brand would accompany
-        them through.</p>
-      <a class="cta cta-arrow" data-page="partners" data-i18n="demo.cta.btn">Join the pilot programme</a>
-      <a class="cta cta-arrow cta-secondary" data-page="lisbon" data-i18n="demo.cta.btn2">Explore the Lisbon
-        Companion</a>
+      <h2 data-i18n="demo.cta.title">This is only one moment. The complete experience contains seven.</h2>
+      <p data-i18n="demo.cta.p1">Seven rhythms. Seven neighbourhoods. One different way of experiencing Lisbon.</p>
+      <a class="cta cta-arrow" data-page="lisbon" data-i18n="demo.cta.btn1">Explore the Lisbon Companion</a>
+      <a class="cta cta-arrow cta-secondary" data-page="partners" data-i18n="demo.cta.btn2">Work with us</a>
     </section>
   </div>
 
@@ -831,9 +845,8 @@
   <div class="page" id="page-lisbon">
     <section>
       <h1 data-i18n="lisbon.title">Lisbon Companion</h1>
-      <p class="lead" data-i18n="lisbon.lead">Our first experience — and our proof of concept.</p>
-      <p data-i18n="lisbon.p1">A curated set of guided walks across Lisbon, structured around seven distinct city
-        rhythms.</p>
+      <p class="lead" data-i18n="lisbon.lead">Our first experience — and the project's proof of concept.</p>
+      <p data-i18n="lisbon.p1">A curated series of walks across Lisbon, structured around seven distinct rhythms of the city.</p>
       <div class="section-image">
         <picture>
           <source media="(max-width: 768px)" srcset="img/carreira-no-28-v1-1024.jpg">
@@ -843,75 +856,203 @@
     </section>
     <section>
       <h2 data-i18n="lisbon.rhythms.title">Seven Rhythms</h2>
-      <p class="lead" data-i18n="lisbon.rhythms.lead">Lisbon does not move in a single rhythm. Each neighbourhood has
-        its own mode of attention.</p>
-      <ul class="feature-list">
-        <li data-i18n="lisbon.r1"><strong>Rhythm of the Senses</strong> — Baixa · Chiado · Bairro Alto · Príncipe Real
-        </li>
-        <li data-i18n="lisbon.r2"><strong>Rhythm of the Streets</strong> — Alfama · Graça · Mouraria</li>
-        <li data-i18n="lisbon.r3"><strong>Rhythm of People</strong> — Intendente · Anjos · Arroios</li>
-        <li data-i18n="lisbon.r4"><strong>Rhythm of Light</strong> — Santos · Alcântara · Belém</li>
-        <li data-i18n="lisbon.r5"><strong>Rhythm of Silence</strong> — Lapa · Estrela · Campo de Ourique</li>
-        <li data-i18n="lisbon.r6"><strong>Inner Rhythm</strong> — Tapada das Necessidades · Ajuda · Monsanto</li>
-        <li data-i18n="lisbon.r7"><strong>Rhythm of Surprises</strong> — Marvila · Beato · Xabregas</li>
-      </ul>
-    </section>
-    <section>
-      <h2 data-i18n="lisbon.get.title">What You Get</h2>
-      <ul class="feature-list">
-        <li data-i18n="lisbon.get.li1">Carefully curated walking routes across seven city rhythms</li>
-        <li data-i18n="lisbon.get.li2">Audio guidance for each location</li>
-        <li data-i18n="lisbon.get.li3">Contextual storytelling grounded in editorial research</li>
-        <li data-i18n="lisbon.get.li4">Observation prompts that guide attention in real time</li>
-        <li data-i18n="lisbon.get.li5">A personal notebook with 24-hour post-trip memory delivery</li>
-        <li data-i18n="lisbon.get.li6">Accessible via link — no download, no login</li>
-      </ul>
-    </section>
-    <section>
-      <h2 data-i18n="lisbon.practice.title">In Practice</h2>
-      <p class="lead" data-i18n="lisbon.practice.lead">You arrive at a square.</p>
-      <p data-i18n="lisbon.practice.p1">At first, it is just movement — people, sounds, passing moments.</p>
-      <p data-i18n="lisbon.practice.p2">The experience invites you to observe its rhythm.</p>
-      <p data-i18n="lisbon.practice.p3">Then it reveals something that is no longer visible.</p>
-      <p data-i18n="lisbon.practice.p4">You are invited to look again.</p>
-      <p data-i18n="lisbon.practice.p5">And suddenly, the place feels entirely different.</p>
-      <div class="separator"></div>
-      <a class="cta cta-arrow" data-page="demo" data-i18n="lisbon.practice.cta">See a live example</a>
+      <p class="lead" data-i18n="lisbon.rhythms.lead">Lisbon does not move in a single rhythm. Each neighbourhood asks for a different form of attention.</p>
+      <div class="walk-step"><strong data-i18n="lisbon.r1.title">Rhythm of the Senses</strong>
+        <p data-i18n="lisbon.r1.areas">Baixa · Chiado · Bairro Alto · Príncipe Real</p>
+        <p data-i18n="lisbon.r1.desc">Where everything begins. The texture of the pavement, the changing light, the movement of the squares, the sensation of a city built upon many others.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r2.title">Rhythm of the Streets</strong>
+        <p data-i18n="lisbon.r2.areas">Alfama · Graça · Mouraria</p>
+        <p data-i18n="lisbon.r2.desc">The oldest part of the city. Medieval alleyways, Moorish walls, streets that still carry centuries within them.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r3.title">Rhythm of People</strong>
+        <p data-i18n="lisbon.r3.areas">Intendente · Anjos · Arroios</p>
+        <p data-i18n="lisbon.r3.desc">A Lisbon in transition — where new voices exist alongside much older stories.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r4.title">Rhythm of Light</strong>
+        <p data-i18n="lisbon.r4.areas">Santos · Alcântara · Belém</p>
+        <p data-i18n="lisbon.r4.desc">The city opens towards the river. Time slows. The Tagus becomes more than a backdrop.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r5.title">Rhythm of Silence</strong>
+        <p data-i18n="lisbon.r5.areas">Lapa · Estrela · Campo de Ourique</p>
+        <p data-i18n="lisbon.r5.desc">A quieter Lisbon made of residential streets, trees, and small gestures that almost go unnoticed.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r6.title">Inner Rhythm</strong>
+        <p data-i18n="lisbon.r6.areas">Tapada das Necessidades · Ajuda · Monsanto</p>
+        <p data-i18n="lisbon.r6.desc">Green spaces, memory, breathing. For those who prefer to feel the city rather than simply see it.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r7.title">Rhythm of Surprises</strong>
+        <p data-i18n="lisbon.r7.areas">Marvila · Beato · Xabregas</p>
+        <p data-i18n="lisbon.r7.desc">A changing Lisbon — rewarding those who arrive without fixed expectations.</p>
+      </div>
     </section>
   </div>
 
   <!-- PARTNERS -->
   <div class="page" id="page-partners">
     <section>
-      <h1 data-i18n="partners.title">For Hotels &amp; Agencies</h1>
-      <p class="lead" data-i18n="partners.lead">The moment your guest leaves the hotel, your presence disappears. Deeply
-        Slow Travel changes that — without adding operational complexity.</p>
-      <p data-i18n="partners.p1">We provide a curated, ready-to-use digital experience that your team can offer guests
-        at the point of departure. No development. No concierge training. No new systems.</p>
+      <h1 data-i18n="partners.title">Partners</h1>
+      <p class="lead" data-i18n="partners.overview.lead">Two audiences. One vision of travel.</p>
+      <p data-i18n="partners.overview.p1">We work with both boutique hotels and luxury travel agencies — each on their own terms, each with their own needs.</p>
+      <div class="partners-overview-actions">
+        <a class="cta cta-arrow" data-page="partners-hotels" data-i18n="partners.hotels.title">For Boutique Hotels</a>
+        <a class="cta cta-arrow" data-page="partners-agencies" data-i18n="partners.agencies.title">For Luxury Travel Agencies</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="page" id="page-partners-hotels">
+    <section>
+      <h1 data-i18n="partners.hotels.title">For Boutique Hotels</h1>
+      <p class="lead" data-i18n="partners.hotels.lead">Extend the guest experience beyond the hotel itself.</p>
+      <p data-i18n="partners.hotels.p1">The moment guests begin exploring independently, most hospitality brands disappear from the experience.</p>
+      <p data-i18n="partners.hotels.p2">Deeply Slow Travel allows that presence to continue — through carefully guided moments of attention, discovery, and memory.</p>
+      <p data-i18n="partners.hotels.p3">No app downloads. No operational complexity. No additional staffing.</p>
+      <p data-i18n="partners.hotels.p4">Simply a carefully designed experience that accompanies guests through the city.</p>
     </section>
     <section>
-      <h2 data-i18n="partners.how.title">How the Pilot Works</h2>
-      <p data-i18n="partners.how.p1">As guests leave to explore the city, they receive a small printed card with a QR
-        code and a short invitation:</p>
+      <h2 data-i18n="partners.common.how.title">How It Works</h2>
+      <p data-i18n="partners.hotels.how.p1">As guests leave to explore Lisbon, they receive a small printed card with a QR code and a short invitation:</p>
       <p style="font-style:italic; padding:1rem 1.5rem; border-left:2px solid var(--border); margin:1.5rem 0;"
-        data-i18n="partners.how.quote">"Lisbon reveals itself slowly. This journey begins just beyond these doors."</p>
-      <p data-i18n="partners.how.p2">Wherever possible, a member of your team introduces the experience in under 30
-        seconds. The guest leaves with the route already open and the first observation already activated.</p>
-      <p data-i18n="partners.how.p3">Within 24 hours of their walk, the guest receives a personal archive of their
-        reflections — delivered under your name, as a natural extension of your hospitality.</p>
+        data-i18n="partners.hotels.how.quote">"Lisbon reveals itself slowly. This journey begins just beyond these doors."</p>
+      <p data-i18n="partners.hotels.how.p2">A member of staff introduces the experience in less than 30 seconds.</p>
+      <p data-i18n="partners.hotels.how.p3">Guests leave with the route already open, the first moment already activated, and the experience already in motion.</p>
+      <p data-i18n="partners.hotels.how.p4">That is everything your team needs to do.</p>
+      <p data-i18n="partners.hotels.how.p5">We can tailor the client interaction to suit your hotel's culture and operational systems.</p>
     </section>
     <section>
-      <h2 data-i18n="partners.agencies.title">For Luxury Travel Agencies</h2>
-      <p data-i18n="partners.agencies.p1">Every luxury itinerary has gaps — the free afternoon, the morning before the
-        tour begins, the evening without a guide. These are the moments your agency cannot fully control, and the
-        moments that often define how a client remembers the destination.</p>
-      <p data-i18n="partners.agencies.p2">The Lisbon Companion fills those gaps with something your recommendation list
-        cannot offer: a curated editorial presence that accompanies your client throughout their independent exploration
-        — without a guide, without additional cost, without operational complexity.</p>
-      <p data-i18n="partners.agencies.p3">The result is a client who returns from Lisbon having experienced the city at
-        a level of depth that most travellers never reach — and who associates that depth with your agency.</p>
-      <div class="separator"></div>
-      <a class="cta cta-arrow" data-page="contact" data-i18n="partners.cta">Join the pilot programme</a>
+      <h2 data-i18n="partners.hotels.exp.title">What Guests Experience</h2>
+      <p data-i18n="partners.common.guide">This is not a traditional city guide.</p>
+      <p data-i18n="partners.hotels.exp.p1">The experience is designed as a dramaturgy of attention — combining atmosphere, hidden detail, observation, and reflection.</p>
+      <p data-i18n="partners.hotels.exp.p2">A square reveals a forgotten history. A street gains emotional depth. A walk becomes a memory that continues long after the journey ends.</p>
+      <p data-i18n="partners.hotels.exp.p3">Within 24 hours, guests receive a personal archive of their discoveries and reflections — delivered quietly under your hotel's name.</p>
+      <p data-i18n="partners.common.memory">Not a survey. A memory.</p>
+    </section>
+    <section>
+      <h2 data-i18n="partners.hotels.layers.title">At Every Location — The Four Layers</h2>
+      <p data-i18n="partners.hotels.layers.lead">Every stop in the Lisbon Companion follows the same structure. Your guests will experience:</p>
+      <div class="walk-step"><strong data-i18n="partners.hotels.layer1.title">Sensory Anchor</strong>
+        <p data-i18n="partners.hotels.layer1.desc">The experience never begins with information. It begins with atmosphere, rhythm, and bodily perception. Your guests arrive before they understand.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="partners.hotels.layer2.title">The Invisible Detail</strong>
+        <p data-i18n="partners.hotels.layer2.desc">A hidden element reframes the place entirely. This is the heart of The Invisible Layer™ — something most people walk past without noticing.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="partners.hotels.layer3.title">Observation Prompt</strong>
+        <p data-i18n="partners.hotels.layer3.desc">A simple act of attention: pause, compare, notice, listen. Your guests stop being passive observers and become participants in the city.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="partners.hotels.layer4.title">Personal Notebook</strong>
+        <p data-i18n="partners.hotels.layer4.desc">A private space for reflections. Within 24 hours, guests receive a digital archive of everything they noticed — delivered quietly under your name.</p>
+      </div>
+    </section>
+    <section>
+      <h2 data-i18n="partners.hotels.after.title">After the Walk</h2>
+      <p data-i18n="partners.hotels.after.p1">The experience does not end when guests return to the hotel.</p>
+      <p data-i18n="partners.hotels.after.p2">Within 24 hours, each guest receives a personal archive of their discoveries and reflections — every observation they saved, every moment they noticed, every thought they recorded during the walk.</p>
+      <p data-i18n="partners.hotels.after.p3">This archive is delivered quietly under your hotel's name.</p>
+      <p data-i18n="partners.hotels.after.p4">It is not a survey. It is not operational data. It is a memory — a tangible trace of a deeper experience of the city that your brand enabled.</p>
+      <p data-i18n="partners.hotels.after.p5">It is the only post-journey touchpoint your guests will receive, and it arrives as a gift, not a prompt.</p>
+    </section>
+    <section>
+      <h2 data-i18n="partners.common.rhythms.title">Seven Rhythms of Lisbon</h2>
+      <p data-i18n="partners.hotels.rhythms.lead">Lisbon does not move in a single rhythm. Each neighbourhood asks for a different form of attention. Your guests will have access to seven distinct ways of experiencing the city — each designed around a different neighbourhood and a different quality of attention.</p>
+      <div class="walk-step"><strong data-i18n="lisbon.r1.title">Rhythm of the Senses</strong>
+        <p data-i18n="lisbon.r1.areas">Baixa · Chiado · Bairro Alto · Príncipe Real</p>
+        <p data-i18n="lisbon.r1.desc">Where everything begins. The texture of the pavement, the changing light, the movement of the squares, the sensation of a city built upon many others.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r2.title">Rhythm of the Streets</strong>
+        <p data-i18n="lisbon.r2.areas">Alfama · Graça · Mouraria</p>
+        <p data-i18n="lisbon.r2.desc">The oldest part of the city. Medieval alleyways, Moorish walls, streets that still carry centuries within them.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r3.title">Rhythm of People</strong>
+        <p data-i18n="lisbon.r3.areas">Intendente · Anjos · Arroios</p>
+        <p data-i18n="lisbon.r3.desc">A Lisbon in transition — where new voices exist alongside much older stories.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r4.title">Rhythm of Light</strong>
+        <p data-i18n="lisbon.r4.areas">Santos · Alcântara · Belém</p>
+        <p data-i18n="lisbon.r4.desc">The city opens towards the river. Time slows. The Tagus becomes more than a backdrop.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r5.title">Rhythm of Silence</strong>
+        <p data-i18n="lisbon.r5.areas">Lapa · Estrela · Campo de Ourique</p>
+        <p data-i18n="lisbon.r5.desc">A quieter Lisbon made of residential streets, trees, and small gestures that almost go unnoticed.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r6.title">Inner Rhythm</strong>
+        <p data-i18n="lisbon.r6.areas">Tapada das Necessidades · Ajuda · Monsanto</p>
+        <p data-i18n="lisbon.r6.desc">Green spaces, memory, breathing. For those who prefer to feel the city rather than simply see it.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r7.title">Rhythm of Surprises</strong>
+        <p data-i18n="lisbon.r7.areas">Marvila · Beato · Xabregas</p>
+        <p data-i18n="lisbon.r7.desc">A changing Lisbon — rewarding those who arrive without fixed expectations.</p>
+      </div>
+    </section>
+    <section>
+      <h2 data-i18n="partners.common.work.title">Work With Us</h2>
+      <p data-i18n="partners.hotels.work.p1">We collaborate with a carefully selected number of hospitality partners who share a similar vision of what meaningful travel can be.</p>
+      <p data-i18n="partners.hotels.work.p2">If that feels aligned with your hotel, we would be glad to start a conversation.</p>
+      <a class="cta cta-arrow" data-page="contact" data-i18n="partners.common.work.cta">Get in touch</a>
+    </section>
+  </div>
+
+  <div class="page" id="page-partners-agencies">
+    <section>
+      <h1 data-i18n="partners.agencies.title">For Luxury Travel Agencies</h1>
+      <p class="lead" data-i18n="partners.agencies.lead">Extend the client experience beyond the itinerary.</p>
+      <p data-i18n="partners.agencies.p1">Every carefully planned itinerary contains unstructured moments — a free afternoon, an evening without a guide, time between experiences.</p>
+      <p data-i18n="partners.agencies.p2">Most agencies fill these gaps with restaurant recommendations or attractions to visit independently.</p>
+      <p data-i18n="partners.agencies.p3">Deeply Slow Travel fills them with something more meaningful — a curated editorial experience that accompanies your clients during independent exploration.</p>
+      <p data-i18n="partners.agencies.p4">Your clients experience Lisbon at a depth most travellers never reach. They return with memories, not just impressions. And they associate that depth with your agency — not with a generic app or travel guide.</p>
+      <p data-i18n="partners.agencies.p5">It requires no additional logistics. No guides. No operational complexity. Just a carefully designed experience your clients carry with them through the city.</p>
+    </section>
+    <section>
+      <h2 data-i18n="partners.common.how.title">How It Works</h2>
+      <p data-i18n="partners.agencies.how.p1">At the right moment in your client's journey — whether that is at arrival, during a planning meeting, or before independent exploration — your team provides access to the experience with a brief explanation of how it works.</p>
+      <p data-i18n="partners.agencies.how.p2">Clients are then free to begin whenever they choose, and to move through the experience at their own pace.</p>
+      <p data-i18n="partners.agencies.how.p3">Because every agency operates differently, we customise the client interaction to match your processes and your way of working with clients.</p>
+    </section>
+    <section>
+      <h2 data-i18n="partners.agencies.exp.title">What Clients Experience</h2>
+      <p data-i18n="partners.common.guide">This is not a traditional city guide.</p>
+      <p data-i18n="partners.agencies.exp.p1">The experience is structured as a dramaturgy of attention — combining atmosphere, hidden detail, observation, and reflection.</p>
+      <p data-i18n="partners.agencies.exp.p2">A square becomes layered with invisible history. A street becomes emotionally memorable. An afternoon becomes something clients continue thinking about after they return home.</p>
+      <p data-i18n="partners.agencies.exp.p3">Within 24 hours, clients receive a personal digital archive of their reflections and discoveries — delivered quietly under your agency's name.</p>
+      <p data-i18n="partners.common.memory">Not a survey. A memory.</p>
+    </section>
+    <section>
+      <h2 data-i18n="partners.common.rhythms.title">Seven Rhythms of Lisbon</h2>
+      <p data-i18n="partners.agencies.rhythms.lead">Lisbon does not move in a single rhythm. Each neighbourhood asks for a different form of attention. Your clients will have access to seven distinct ways of experiencing the city — each designed around a different neighbourhood and a different quality of attention.</p>
+      <div class="walk-step"><strong data-i18n="lisbon.r1.title">Rhythm of the Senses</strong>
+        <p data-i18n="lisbon.r1.areas">Baixa · Chiado · Bairro Alto · Príncipe Real</p>
+        <p data-i18n="lisbon.r1.desc">Where everything begins. The texture of the pavement, the changing light, the movement of the squares, the sensation of a city built upon many others.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r2.title">Rhythm of the Streets</strong>
+        <p data-i18n="lisbon.r2.areas">Alfama · Graça · Mouraria</p>
+        <p data-i18n="lisbon.r2.desc">The oldest part of the city. Medieval alleyways, Moorish walls, streets that still carry centuries within them.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r3.title">Rhythm of People</strong>
+        <p data-i18n="lisbon.r3.areas">Intendente · Anjos · Arroios</p>
+        <p data-i18n="lisbon.r3.desc">A Lisbon in transition — where new voices exist alongside much older stories.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r4.title">Rhythm of Light</strong>
+        <p data-i18n="lisbon.r4.areas">Santos · Alcântara · Belém</p>
+        <p data-i18n="lisbon.r4.desc">The city opens towards the river. Time slows. The Tagus becomes more than a backdrop.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r5.title">Rhythm of Silence</strong>
+        <p data-i18n="lisbon.r5.areas">Lapa · Estrela · Campo de Ourique</p>
+        <p data-i18n="lisbon.r5.desc">A quieter Lisbon made of residential streets, trees, and small gestures that almost go unnoticed.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r6.title">Inner Rhythm</strong>
+        <p data-i18n="lisbon.r6.areas">Tapada das Necessidades · Ajuda · Monsanto</p>
+        <p data-i18n="lisbon.r6.desc">Green spaces, memory, breathing. For those who prefer to feel the city rather than simply see it.</p>
+      </div>
+      <div class="walk-step"><strong data-i18n="lisbon.r7.title">Rhythm of Surprises</strong>
+        <p data-i18n="lisbon.r7.areas">Marvila · Beato · Xabregas</p>
+        <p data-i18n="lisbon.r7.desc">A changing Lisbon — rewarding those who arrive without fixed expectations.</p>
+      </div>
+    </section>
+    <section>
+      <h2 data-i18n="partners.common.work.title">Work With Us</h2>
+      <p data-i18n="partners.agencies.work.p1">We collaborate with a carefully selected number of travel agencies who share a similar vision of what meaningful travel can be.</p>
+      <p data-i18n="partners.agencies.work.p2">If that feels aligned with your agency, we would be glad to start a conversation.</p>
+      <a class="cta cta-arrow" data-page="contact" data-i18n="partners.common.work.cta">Get in touch</a>
     </section>
   </div>
 
@@ -919,19 +1060,16 @@
   <div class="page" id="page-contact">
     <section>
       <h1 data-i18n="contact.title">Contact</h1>
-      <p class="lead" data-i18n="contact.lead">If you would like to know more — or explore a pilot partnership:</p>
+      <p class="lead" data-i18n="contact.lead">If you would like to know more — or explore a possible collaboration:</p>
       <p class="contact-email"><a id="emailLink" href="#contact"></a></p>
       <div class="separator"></div>
-      <p data-i18n="contact.note">We are currently selecting a very limited number of pilot partners for the Lisbon
-        Companion. If you represent a boutique hotel or luxury travel agency with operations in Lisbon, we would be glad
-        to hear from you.</p>
+      <p data-i18n="contact.note">We would be delighted to hear from boutique hotels, luxury travel agencies, and travellers looking to experience Lisbon differently.</p>
     </section>
   </div>
 
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Deeply Slow Travel</div>
-      <p class="footer-tagline">Travel slowly. Live deeply.</p>
       <ul class="footer-links">
         <li><a data-page="home" data-i18n="nav.home">Home</a></li>
         <li><a data-page="about" data-i18n="nav.about">About</a></li>
@@ -952,276 +1090,406 @@
           'nav.home': 'Home', 'nav.about': 'About', 'nav.experience': 'The Experience', 'nav.demo': 'See It In Practice', 'nav.lisbon': 'Lisbon Companion', 'nav.partners': 'Partners', 'nav.contact': 'Contact',
           'home.hero.title': 'Deeply Slow Travel',
           'home.hero.tagline1': 'A different way to experience a city.',
-          'home.hero.tagline2': 'Not by seeing more \u2014<br>but by seeing better.',
+          'home.hero.tagline2': 'Not by seeing more —<br>but by noticing more.',
           'home.hero.cta': 'See it in practice',
           'home.aud.traveller.label': 'For Travellers',
-          'home.aud.traveller.title': 'Experience Lisbon the way most people never do.',
-          'home.aud.traveller.desc': 'A curated walking companion that reveals the invisible layer beneath the city \u2014 guiding your attention, not just your direction.',
-          'home.aud.traveller.cta': 'Explore Lisbon Companion',
+          'home.aud.traveller.title': 'Discover Lisbon in a way most people never truly do.',
+          'home.aud.traveller.desc': 'Carefully guided walks that reveal the invisible layers of the city — helping you notice what almost everyone else walks past.',
+          'home.aud.traveller.cta': 'Explore the Lisbon Companion',
           'home.aud.hotels.label': 'For Boutique Hotels',
-          'home.aud.hotels.title': 'Your brand, present even when your guest explores alone.',
-          'home.aud.hotels.desc': 'Extend your hospitality beyond the property \u2014 without adding operational complexity. A curated guest experience, ready to offer from day one.',
-          'home.aud.hotels.cta': 'Learn about the pilot',
+          'home.aud.hotels.title': 'Your hotel\'s presence continues — even when guests leave to explore the city.',
+          'home.aud.hotels.desc': 'Extend the feeling of care, continuity, and attention beyond your doors — without increasing operational complexity.',
+          'home.aud.hotels.cta': 'Learn how it works',
           'home.aud.agencies.label': 'For Luxury Travel Agencies',
-          'home.aud.agencies.title': 'Turn the free afternoon into the most memorable part of the trip.',
-          'home.aud.agencies.desc': 'A curated editorial presence that accompanies your client during independent exploration \u2014 without a guide, without extra cost.',
-          'home.aud.agencies.cta': 'Explore the partnership',
+          'home.aud.agencies.title': 'Turn unstructured time into one of the most memorable parts of the journey.',
+          'home.aud.agencies.desc': 'A carefully crafted editorial experience designed to accompany your clients during independent exploration — without guides, additional logistics, or operational burden.',
+          'home.aud.agencies.cta': 'Explore partnership opportunities',
           'home.whatis.title': 'What This Is',
-          'home.whatis.lead': 'When you travel, you often move from place to place.',
-          'home.whatis.p1': 'You follow maps.<br>You check recommendations.<br>You try not to miss anything.',
-          'home.whatis.p2': 'But once you\u2019re there, something is missing.',
-          'home.whatis.p3': 'No one really shows you <em>how</em> to experience what you\u2019re seeing.',
-          'home.whatis.p4': 'That\u2019s what Deeply Slow Travel is for.',
+          'home.whatis.lead': 'When we travel, we constantly move from one place to another.',
+          'home.whatis.p1': 'We follow maps.<br>We check recommendations.<br>We try not to miss anything.',
+          'home.whatis.p2': 'But once we arrive, something often feels absent.',
+          'home.whatis.p3': 'Very few people actually show us how to look at what we are seeing.',
+          'home.whatis.p4': 'That is where Deeply Slow Travel begins.',
           'home.how.title': 'How It Works',
-          'home.how.lead': 'Each experience is designed to be used as you walk \u2014 accessible via link, with no download required.',
-          'home.how.p1': 'You arrive at a square.<br>You are invited to observe its rhythm.<br>A hidden layer of history surfaces beneath the ordinary.<br>You look again. The place becomes different.',
-          'home.how.p2': 'That is The Invisible Layer\u2122.',
-          'home.how.cta_heading': 'Experience Lisbon differently',
+          'home.how.lead': 'Each experience is designed to be lived while walking — accessible through a simple link, with no app download required.',
+          'home.how.p1': 'You arrive at a square.',
+          'home.how.p2': 'The experience invites you to pause and notice the rhythm of the place.',
+          'home.how.p3': 'Slowly, a hidden layer of history begins to emerge beneath the ordinary.',
+          'home.how.p4': 'You look again. And the place changes.',
+          'home.how.p5': 'That is what we call The Invisible Layer™.',
           'home.how.cta': 'See a live example',
           'about.title': 'About',
-          'about.lead': 'Deeply Slow Travel was not designed in an office.',
-          'about.p1': 'It was shaped on the streets of Lisbon \u2014 through years of walking, observing, and guiding.',
-          'about.p2': 'It comes from the understanding that travel is often reduced to a checklist, while the real city reveals itself in the pauses. In the way light moves across a fa\u00e7ade. In the rhythm of a square. In what remains unnoticed.',
-          'about.idea.title': 'The Idea',
-          'about.idea.lead': 'We believe that small moments, when experienced with attention, can be more meaningful than trying to see everything.',
-          'about.idea.p1': 'So we design experiences that help you slow down \u2014<br>not in time, but in awareness.',
-          'about.idea.p2': 'The defensible asset here is not technology. It is curated perception \u2014 built over years, not generated in seconds.',
-          'about.founders': 'Created by Alessandra Velho.',
+          'about.lead': 'Deeply Slow Travel began with years of walking through Lisbon without hurrying.',
+          'about.p1': 'Not collecting attractions.',
+          'about.p2': 'Not trying to &quot;cover&quot; the city.',
+          'about.p3': 'Just paying attention.',
+          'about.p4': 'Certain places kept revealing themselves slowly — through light, rhythm, silence, repetition, and small details most people passed without noticing.',
+          'about.p5': 'Over time, I realised that what I was searching for in travel was not more information.',
+          'about.p6': 'It was a different quality of attention.',
+          'about.p7': 'Deeply Slow Travel grew from that idea.',
+          'about.p8': 'The project combines walking, editorial storytelling, sensory observation, and historical research to create experiences that help travellers experience cities more deeply — and more personally.',
+          'about.p9': 'Every route is designed slowly, on foot, through repeated observation of how places feel, change, sound, and reveal themselves over time.',
+          'about.p10': 'Because meaningful travel rarely comes from seeing more.',
+          'about.p11': 'It comes from learning how to notice differently.',
+          'about.founder.name': 'Alessandra Velho',
+          'about.founder.title': 'Founder & Creative Director, Deeply Slow Travel',
           'exp.title': 'The Experience',
-          'exp.structure.title': 'A Structured Framework',
-          'exp.structure.lead': 'Each walk follows the same carefully designed sequence \u2014 a dramaturgy of attention.',
+          'exp.structure.title': 'A Structured Journey',
+          'exp.structure.lead': 'Each walk follows the same carefully designed sequence — a dramaturgy of attention.',
           'exp.step1.title': 'Sensory Anchor',
-          'exp.step1.desc': 'The experience begins with atmosphere, rhythm, and bodily perception. The traveller feels first. Interpretation arrives afterwards.',
+          'exp.step1.desc': 'The experience begins with atmosphere, rhythm, and bodily perception. The traveller feels the place first. Interpretation comes afterwards.',
           'exp.step2.title': 'The Invisible Detail',
-          'exp.step2.desc': 'A hidden or overlooked element reframes the place. This is the core of The Invisible Layer\u2122.',
+          'exp.step2.desc': 'A hidden or overlooked element completely reframes the place.<br>This is the heart of The Invisible Layer™ — the moment most people walk past without ever noticing.',
           'exp.step3.title': 'Observation Prompt',
-          'exp.step3.desc': 'A specific act of attention: pause, compare, notice, look, listen. The traveller becomes an active participant rather than a passive tourist.',
+          'exp.step3.desc': 'A simple act of attention: pause, compare, notice, listen, look again.<br>The traveller stops being a passive observer of the city and begins participating in it.',
           'exp.step4.title': 'Personal Notebook',
-          'exp.step4.desc': 'A lightweight space for reflections and personal discoveries. Within 24 hours, the guest receives a curated archive of their walk \u2014 delivered quietly, as a lasting memory.',
-          'exp.layer.title': 'The Invisible Layer\u2122',
-          'exp.layer.lead': 'Most people walk through a city and see what is visible.',
-          'exp.layer.p1': 'The Invisible Layer\u2122 reveals what is not \u2014 the history beneath the stones, the detail most people miss, the rhythm that only reveals itself to those who pause.',
-          'exp.layer.p2': 'It is not more information. It is a different quality of attention.',
+          'exp.step4.desc': 'A private space for reflections and personal discoveries.<br>Within 24 hours, each traveller receives a digital archive of the moments saved throughout the walk — delivered quietly, as a lasting memory.',
+          'exp.layer.title': 'The Invisible Layer™',
+          'exp.layer.lead': 'Most people move through a city seeing only what is visible.',
+          'exp.layer.p1': 'The Invisible Layer™ reveals what usually remains hidden — the history beneath the pavement, the details most people overlook, the rhythms that only emerge when someone slows down enough to notice them.',
+          'exp.layer.p2': 'It is not more information.',
+          'exp.layer.p3': 'It is a different quality of attention.',
           'exp.cta': 'See it in practice',
-          'exp.multi.title': 'Multiple Modes',
-          'exp.multi.p1': 'The experience adapts to different travel behaviours. The same content may be accessed through audio, short-form reading, or minimal observation prompts.',
-          'exp.multi.p2': 'Couples walking together. Urban noise. Different comfort levels with headphones. The editorial core remains constant. Only the format adapts.',
-          'demo.title': 'The Invisible Layer\u2122 \u2014 In Practice',
-          'demo.lead': 'The following is a single moment from the Lisbon Companion \u2014 one stop, experienced exactly as your guest would encounter it.',
-          'demo.sublead': 'This is what The Invisible Layer\u2122 looks like in practice.',
-          'demo.step1.label': 'Step 1 \u2014 Arrive',
-          'demo.step1.title': 'Pra\u00e7a da Figueira, Lisbon.',
-          'demo.step1.p1': 'You are standing at the edge of one of Lisbon\u2019s busiest squares. Taxis cutting corners. Tuk-tuks negotiating narrow gaps. Tour groups following coloured flags.',
+          'exp.multi.title': 'Different Ways to Explore',
+          'exp.multi.p1': 'The experience naturally adapts to different ways of moving through the city.',
+          'exp.multi.p2': 'The same walk may be experienced through audio, short-form reading, or small observation prompts.',
+          'exp.multi.p3': 'Couples walking together. Urban noise. People who prefer listening. Others who prefer reading.',
+          'exp.multi.p4': 'The editorial core always remains the same. Only the format changes.',
+          'demo.title': 'The Invisible Layer™ — In Practice',
+          'demo.lead': 'What follows is a real moment from the Lisbon Companion — experienced exactly as it would unfold during the walk.',
+          'demo.step1.label': 'Step 1 — Arrive',
+          'demo.step1.title': 'Praça da Figueira, Lisbon.',
+          'demo.step1.p1': 'You are standing in one of the busiest squares in the city. Taxis cutting across traffic. Tuk-tuks weaving through narrow gaps. Tour groups following coloured flags.',
           'demo.step1.p2': 'Do not move yet.',
-          'demo.step1.p3': 'Stand still for one minute. Let the movement happen around you. Notice the rhythm of the square \u2014 not the noise, but the pattern beneath it.',
-          'demo.step1.p4': 'When you feel the rhythm, you are ready.',
-          'demo.step2.label': 'Step 2 \u2014 The Invisible Layer\u2122',
-          'demo.step2.title': 'Beneath this square is a city within a city.',
-          'demo.step2.p1': 'Beneath the ground you are standing on once stood Lisbon\u2019s largest medieval hospital \u2014 the Hospital Real de Todos os Santos. Built in the fifteenth century, it had cloisters, wards, chapels, and gardens.',
-          'demo.step2.p2': 'On the morning of the 1st of November 1755 \u2014 All Saints\u2019 Day \u2014 an earthquake struck Lisbon. The fires that followed lasted five days. The hospital was destroyed entirely.',
-          'demo.step2.p3': 'No plaque marks the site. No ruin is visible. The ground absorbed everything. The city was rebuilt on top.',
-          'demo.step2.p4': 'Almost everyone who crosses it today has no idea.',
-          'demo.step3.label': 'Step 3 \u2014 Your Observation',
+          'demo.step1.p3': 'Stand still for a minute.',
+          'demo.step1.p4': 'Let the movement happen around you. Notice the rhythm of the square — not the noise itself, but the pattern beneath it. The way people cross without looking. The strangely choreographed movement of the pigeons.',
+          'demo.step1.p5': 'When you feel that rhythm, continue.',
+          'demo.step2.label': 'Step 2 — The Invisible Layer™',
+          'demo.step2.title': 'Beneath this square lies another city.',
+          'demo.step2.p1': 'Under your feet once stood Lisbon\'s largest medieval hospital — the Hospital Real de Todos os Santos. Built in the fifteenth century, it contained cloisters, wards, chapels, and gardens. For centuries, it was one of Europe\'s most advanced medical institutions.',
+          'demo.step2.p2': 'On the morning of 1 November 1755 — All Saints\' Day — an earthquake struck Lisbon. The fires that followed lasted five days.',
+          'demo.step2.p3': 'The hospital disappeared completely.',
+          'demo.step2.p4': 'Today there is no plaque. No visible ruin. No obvious sign of what once existed here.',
+          'demo.step2.p5': 'The city was rebuilt over it.',
+          'demo.step2.p6': 'And the square became simply another square.',
+          'demo.step2.p7': 'For almost everyone.',
+          'demo.step3.label': 'Step 3 — Your Observation',
           'demo.step3.title': 'Now look down.',
-          'demo.step3.p1': 'The stone beneath your feet was laid over rubble, over ash, over what was once a place of care for the sick and dying of medieval Lisbon.',
-          'demo.step3.p2': 'The people crossing this square right now \u2014 none of them know what they are walking on.',
-          'demo.step3.prompt.label': 'Your prompt',
-          'demo.step3.prompt.text': 'What does it feel like to stand in a place where so much happened, and where almost nothing remains? Not the history \u2014 the feeling. Stay with it for a moment before you move on.',
-          'demo.step4.label': 'Step 4 \u2014 Your Notebook',
+          'demo.step3.p1': 'The stone beneath your feet was laid over ash, rubble, and centuries of invisible history.',
+          'demo.step3.p2': 'The people crossing this square right now have no idea what once stood here.',
+          'demo.step3.p3': 'And yet, somehow, it is all still present.',
+          'demo.step3.p4': 'Stay with that thought for a few moments before moving on.',
+          'demo.step4.label': 'Step 4 — Your Notebook',
           'demo.step4.title': 'This moment belongs to you.',
-          'demo.step4.p1': 'In the Lisbon Companion, this is where your guest writes \u2014 not a review, not a caption, but a personal impression.',
-          'demo.step4.p2': 'These reflections are saved privately throughout the walk. Within 24 hours, your guest receives a personal archive \u2014 delivered quietly, under your name.',
-          'demo.step4.p3': 'Not a receipt. Not a survey. A memory.',
-          'demo.cta.title': 'This is one moment.<br>The full experience contains seven.',
-          'demo.cta.p1': 'Seven rhythms. Seven neighbourhoods. One coherent portrait of Lisbon that no map can offer.',
-          'demo.cta.p2': 'This is what your guests would experience. And this is what your brand would accompany them through.',
-          'demo.cta.btn': 'Join the pilot programme',
-          'demo.cta.btn2': 'Explore the Lisbon Companion',
+          'demo.step4.p1': 'In the Lisbon Companion, this is where you write — not a review or a caption, but a personal impression.',
+          'demo.step4.p2': 'A sentence. A word. Whatever surfaces.',
+          'demo.step4.p3': 'Throughout the walk, these reflections are quietly saved.',
+          'demo.step4.p4': 'Within 24 hours, you receive a personal archive containing everything you noticed along the way.',
+          'demo.step4.p5': 'Not a receipt. Not a survey.',
+          'demo.step4.p6': 'A memory.',
+          'demo.cta.title': 'This is only one moment. The complete experience contains seven.',
+          'demo.cta.p1': 'Seven rhythms. Seven neighbourhoods. One different way of experiencing Lisbon.',
+          'demo.cta.btn1': 'Explore the Lisbon Companion',
+          'demo.cta.btn2': 'Work with us',
           'lisbon.title': 'Lisbon Companion',
-          'lisbon.lead': 'Our first experience \u2014 and our proof of concept.',
-          'lisbon.p1': 'A curated set of guided walks across Lisbon, structured around seven distinct city rhythms.',
+          'lisbon.lead': 'Our first experience — and the project\'s proof of concept.',
+          'lisbon.p1': 'A curated series of walks across Lisbon, structured around seven distinct rhythms of the city.',
           'lisbon.rhythms.title': 'Seven Rhythms',
-          'lisbon.rhythms.lead': 'Lisbon does not move in a single rhythm. Each neighbourhood has its own mode of attention.',
-          'lisbon.r1': '<strong>Rhythm of the Senses</strong> \u2014 Baixa \u00b7 Chiado \u00b7 Bairro Alto \u00b7 Pr\u00edncipe Real',
-          'lisbon.r2': '<strong>Rhythm of the Streets</strong> \u2014 Alfama \u00b7 Gra\u00e7a \u00b7 Mouraria',
-          'lisbon.r3': '<strong>Rhythm of People</strong> \u2014 Intendente \u00b7 Anjos \u00b7 Arroios',
-          'lisbon.r4': '<strong>Rhythm of Light</strong> \u2014 Santos \u00b7 Alc\u00e2ntara \u00b7 Bel\u00e9m',
-          'lisbon.r5': '<strong>Rhythm of Silence</strong> \u2014 Lapa \u00b7 Estrela \u00b7 Campo de Ourique',
-          'lisbon.r6': '<strong>Inner Rhythm</strong> \u2014 Tapada das Necessidades \u00b7 Ajuda \u00b7 Monsanto',
-          'lisbon.r7': '<strong>Rhythm of Surprises</strong> \u2014 Marvila \u00b7 Beato \u00b7 Xabregas',
-          'lisbon.get.title': 'What You Get',
-          'lisbon.get.li1': 'Carefully curated walking routes across seven city rhythms',
-          'lisbon.get.li2': 'Audio guidance for each location',
-          'lisbon.get.li3': 'Contextual storytelling grounded in editorial research',
-          'lisbon.get.li4': 'Observation prompts that guide attention in real time',
-          'lisbon.get.li5': 'A personal notebook with 24-hour post-trip memory delivery',
-          'lisbon.get.li6': 'Accessible via link \u2014 no download, no login',
-          'lisbon.practice.title': 'In Practice',
-          'lisbon.practice.lead': 'You arrive at a square.',
-          'lisbon.practice.p1': 'At first, it is just movement \u2014 people, sounds, passing moments.',
-          'lisbon.practice.p2': 'The experience invites you to observe its rhythm.',
-          'lisbon.practice.p3': 'Then it reveals something that is no longer visible.',
-          'lisbon.practice.p4': 'You are invited to look again.',
-          'lisbon.practice.p5': 'And suddenly, the place feels entirely different.',
-          'lisbon.practice.cta': 'See a live example',
-          'partners.title': 'For Hotels & Agencies',
-          'partners.lead': 'The moment your guest leaves the hotel, your presence disappears. Deeply Slow Travel changes that \u2014 without adding operational complexity.',
-          'partners.p1': 'We provide a curated, ready-to-use digital experience that your team can offer guests at the point of departure. No development. No concierge training. No new systems.',
-          'partners.how.title': 'How the Pilot Works',
-          'partners.how.p1': 'As guests leave to explore the city, they receive a small printed card with a QR code and a short invitation:',
-          'partners.how.quote': '\u201cLisbon reveals itself slowly. This journey begins just beyond these doors.\u201d',
-          'partners.how.p2': 'Wherever possible, a member of your team introduces the experience in under 30 seconds. The guest leaves with the route already open and the first observation already activated.',
-          'partners.how.p3': 'Within 24 hours of their walk, the guest receives a personal archive of their reflections \u2014 delivered under your name, as a natural extension of your hospitality.',
+          'lisbon.rhythms.lead': 'Lisbon does not move in a single rhythm. Each neighbourhood asks for a different form of attention.',
+          'lisbon.r1.title': 'Rhythm of the Senses',
+          'lisbon.r1.areas': 'Baixa · Chiado · Bairro Alto · Príncipe Real',
+          'lisbon.r1.desc': 'Where everything begins. The texture of the pavement, the changing light, the movement of the squares, the sensation of a city built upon many others.',
+          'lisbon.r2.title': 'Rhythm of the Streets',
+          'lisbon.r2.areas': 'Alfama · Graça · Mouraria',
+          'lisbon.r2.desc': 'The oldest part of the city. Medieval alleyways, Moorish walls, streets that still carry centuries within them.',
+          'lisbon.r3.title': 'Rhythm of People',
+          'lisbon.r3.areas': 'Intendente · Anjos · Arroios',
+          'lisbon.r3.desc': 'A Lisbon in transition — where new voices exist alongside much older stories.',
+          'lisbon.r4.title': 'Rhythm of Light',
+          'lisbon.r4.areas': 'Santos · Alcântara · Belém',
+          'lisbon.r4.desc': 'The city opens towards the river. Time slows. The Tagus becomes more than a backdrop.',
+          'lisbon.r5.title': 'Rhythm of Silence',
+          'lisbon.r5.areas': 'Lapa · Estrela · Campo de Ourique',
+          'lisbon.r5.desc': 'A quieter Lisbon made of residential streets, trees, and small gestures that almost go unnoticed.',
+          'lisbon.r6.title': 'Inner Rhythm',
+          'lisbon.r6.areas': 'Tapada das Necessidades · Ajuda · Monsanto',
+          'lisbon.r6.desc': 'Green spaces, memory, breathing. For those who prefer to feel the city rather than simply see it.',
+          'lisbon.r7.title': 'Rhythm of Surprises',
+          'lisbon.r7.areas': 'Marvila · Beato · Xabregas',
+          'lisbon.r7.desc': 'A changing Lisbon — rewarding those who arrive without fixed expectations.',
+          'partners.title': 'Partners',
+          'partners.overview.lead': 'Two audiences. One vision of travel.',
+          'partners.overview.p1': 'We work with both boutique hotels and luxury travel agencies — each on their own terms, each with their own needs.',
+          'partners.overview.cta1': 'Extend the guest experience beyond the hotel itself',
+          'partners.overview.cta2': 'Extend the client experience beyond the itinerary',
+          'partners.hotels.title': 'For Boutique Hotels',
+          'partners.hotels.lead': 'Extend the guest experience beyond the hotel itself.',
+          'partners.hotels.p1': 'The moment guests begin exploring independently, most hospitality brands disappear from the experience.',
+          'partners.hotels.p2': 'Deeply Slow Travel allows that presence to continue — through carefully guided moments of attention, discovery, and memory.',
+          'partners.hotels.p3': 'No app downloads. No operational complexity. No additional staffing.',
+          'partners.hotels.p4': 'Simply a carefully designed experience that accompanies guests through the city.',
+          'partners.common.how.title': 'How It Works',
+          'partners.hotels.how.p1': 'As guests leave to explore Lisbon, they receive a small printed card with a QR code and a short invitation:',
+          'partners.hotels.how.quote': '"Lisbon reveals itself slowly. This journey begins just beyond these doors."',
+          'partners.hotels.how.p2': 'A member of staff introduces the experience in less than 30 seconds.',
+          'partners.hotels.how.p3': 'Guests leave with the route already open, the first moment already activated, and the experience already in motion.',
+          'partners.hotels.how.p4': 'That is everything your team needs to do.',
+          'partners.hotels.how.p5': 'We can tailor the client interaction to suit your hotel\'s culture and operational systems.',
+          'partners.hotels.exp.title': 'What Guests Experience',
+          'partners.common.guide': 'This is not a traditional city guide.',
+          'partners.hotels.exp.p1': 'The experience is designed as a dramaturgy of attention — combining atmosphere, hidden detail, observation, and reflection.',
+          'partners.hotels.exp.p2': 'A square reveals a forgotten history. A street gains emotional depth. A walk becomes a memory that continues long after the journey ends.',
+          'partners.hotels.exp.p3': 'Within 24 hours, guests receive a personal archive of their discoveries and reflections — delivered quietly under your hotel\'s name.',
+          'partners.common.memory': 'Not a survey. A memory.',
+          'partners.hotels.layers.title': 'At Every Location — The Four Layers',
+          'partners.hotels.layers.lead': 'Every stop in the Lisbon Companion follows the same structure. Your guests will experience:',
+          'partners.hotels.layer1.title': 'Sensory Anchor',
+          'partners.hotels.layer1.desc': 'The experience never begins with information. It begins with atmosphere, rhythm, and bodily perception. Your guests arrive before they understand.',
+          'partners.hotels.layer2.title': 'The Invisible Detail',
+          'partners.hotels.layer2.desc': 'A hidden element reframes the place entirely. This is the heart of The Invisible Layer™ — something most people walk past without noticing.',
+          'partners.hotels.layer3.title': 'Observation Prompt',
+          'partners.hotels.layer3.desc': 'A simple act of attention: pause, compare, notice, listen. Your guests stop being passive observers and become participants in the city.',
+          'partners.hotels.layer4.title': 'Personal Notebook',
+          'partners.hotels.layer4.desc': 'A private space for reflections. Within 24 hours, guests receive a digital archive of everything they noticed — delivered quietly under your name.',
+          'partners.hotels.after.title': 'After the Walk',
+          'partners.hotels.after.p1': 'The experience does not end when guests return to the hotel.',
+          'partners.hotels.after.p2': 'Within 24 hours, each guest receives a personal archive of their discoveries and reflections — every observation they saved, every moment they noticed, every thought they recorded during the walk.',
+          'partners.hotels.after.p3': 'This archive is delivered quietly under your hotel\'s name.',
+          'partners.hotels.after.p4': 'It is not a survey. It is not operational data. It is a memory — a tangible trace of a deeper experience of the city that your brand enabled.',
+          'partners.hotels.after.p5': 'It is the only post-journey touchpoint your guests will receive, and it arrives as a gift, not a prompt.',
+          'partners.common.rhythms.title': 'Seven Rhythms of Lisbon',
+          'partners.hotels.rhythms.lead': 'Lisbon does not move in a single rhythm. Each neighbourhood asks for a different form of attention. Your guests will have access to seven distinct ways of experiencing the city — each designed around a different neighbourhood and a different quality of attention.',
           'partners.agencies.title': 'For Luxury Travel Agencies',
-          'partners.agencies.p1': 'Every luxury itinerary has gaps \u2014 the free afternoon, the morning before the tour begins, the evening without a guide.',
-          'partners.agencies.p2': 'The Lisbon Companion fills those gaps with a curated editorial presence that accompanies your client throughout their independent exploration \u2014 without a guide, without additional cost, without operational complexity.',
-          'partners.agencies.p3': 'The result is a client who returns from Lisbon having experienced the city at a level of depth that most travellers never reach \u2014 and who associates that depth with your agency.',
-          'partners.cta': 'Join the pilot programme',
+          'partners.common.work.title': 'Work With Us',
+          'partners.common.work.cta': 'Get in touch',
+          'partners.hotels.work.p1': 'We collaborate with a carefully selected number of hospitality partners who share a similar vision of what meaningful travel can be.',
+          'partners.hotels.work.p2': 'If that feels aligned with your hotel, we would be glad to start a conversation.',
+          'partners.agencies.lead': 'Extend the client experience beyond the itinerary.',
+          'partners.agencies.p1': 'Every carefully planned itinerary contains unstructured moments — a free afternoon, an evening without a guide, time between experiences.',
+          'partners.agencies.p2': 'Most agencies fill these gaps with restaurant recommendations or attractions to visit independently.',
+          'partners.agencies.p3': 'Deeply Slow Travel fills them with something more meaningful — a curated editorial experience that accompanies your clients during independent exploration.',
+          'partners.agencies.p4': 'Your clients experience Lisbon at a depth most travellers never reach. They return with memories, not just impressions. And they associate that depth with your agency — not with a generic app or travel guide.',
+          'partners.agencies.p5': 'It requires no additional logistics. No guides. No operational complexity. Just a carefully designed experience your clients carry with them through the city.',
+          'partners.agencies.how.p1': 'At the right moment in your client\'s journey — whether that is at arrival, during a planning meeting, or before independent exploration — your team provides access to the experience with a brief explanation of how it works.',
+          'partners.agencies.how.p2': 'Clients are then free to begin whenever they choose, and to move through the experience at their own pace.',
+          'partners.agencies.how.p3': 'Because every agency operates differently, we customise the client interaction to match your processes and your way of working with clients.',
+          'partners.agencies.exp.title': 'What Clients Experience',
+          'partners.agencies.exp.p1': 'The experience is structured as a dramaturgy of attention — combining atmosphere, hidden detail, observation, and reflection.',
+          'partners.agencies.exp.p2': 'A square becomes layered with invisible history. A street becomes emotionally memorable. An afternoon becomes something clients continue thinking about after they return home.',
+          'partners.agencies.exp.p3': 'Within 24 hours, clients receive a personal digital archive of their reflections and discoveries — delivered quietly under your agency\'s name.',
+          'partners.agencies.rhythms.lead': 'Lisbon does not move in a single rhythm. Each neighbourhood asks for a different form of attention. Your clients will have access to seven distinct ways of experiencing the city — each designed around a different neighbourhood and a different quality of attention.',
+          'partners.agencies.work.p1': 'We collaborate with a carefully selected number of travel agencies who share a similar vision of what meaningful travel can be.',
+          'partners.agencies.work.p2': 'If that feels aligned with your agency, we would be glad to start a conversation.',
           'contact.title': 'Contact',
-          'contact.lead': 'If you would like to know more \u2014 or explore a pilot partnership:',
-          'contact.note': 'We are currently selecting a very limited number of pilot partners for the Lisbon Companion. If you represent a boutique hotel or luxury travel agency with operations in Lisbon, we would be glad to hear from you.'
+          'contact.lead': 'If you would like to know more — or explore a possible collaboration:',
+          'contact.note': 'We would be delighted to hear from boutique hotels, luxury travel agencies, and travellers looking to experience Lisbon differently.'
         },
         pt: {
-          'nav.home': 'Home', 'nav.about': 'Sobre', 'nav.experience': 'A Experi\u00eancia', 'nav.demo': 'Veja na Pr\u00e1tica', 'nav.lisbon': 'Lisbon Companion', 'nav.partners': 'Parceiros', 'nav.contact': 'Contato',
+          'nav.home': 'Home', 'nav.about': 'Sobre', 'nav.experience': 'A Experiência', 'nav.demo': 'Ver na Prática', 'nav.lisbon': 'Lisbon Companion', 'nav.partners': 'Parceiros', 'nav.contact': 'Contacto',
           'home.hero.title': 'Deeply Slow Travel',
-          'home.hero.tagline1': 'Uma forma diferente de viver uma cidade.',
-          'home.hero.tagline2': 'N\u00e3o vendo mais \u2014<br>mas vendo melhor.',
-          'home.hero.cta': 'Veja na pr\u00e1tica',
+          'home.hero.tagline1': 'Uma forma diferente de olhar para uma cidade.',
+          'home.hero.tagline2': 'Não por ver mais —<br>mas por reparar melhor.',
+          'home.hero.cta': 'Ver na prática',
           'home.aud.traveller.label': 'Para Viajantes',
-          'home.aud.traveller.title': 'Viva Lisboa como a maioria das pessoas nunca vai viver.',
-          'home.aud.traveller.desc': 'Um companion de caminhada curado que revela a camada invis\u00edvel por baixo da cidade \u2014 orientando a sua aten\u00e7\u00e3o, n\u00e3o apenas a dire\u00e7\u00e3o.',
-          'home.aud.traveller.cta': 'Explore o Lisbon Companion',
-          'home.aud.hotels.label': 'Para Hot\u00e9is Boutique',
-          'home.aud.hotels.title': 'A sua marca, presente mesmo quando o h\u00f3spede explora sozinho.',
-          'home.aud.hotels.desc': 'Estenda a sua hospitalidade para al\u00e9m da propriedade \u2014 sem adicionar complexidade operacional. Uma experi\u00eancia curada para h\u00f3spedes, pronta a oferecer desde o primeiro dia.',
-          'home.aud.hotels.cta': 'Saiba mais sobre o piloto',
-          'home.aud.agencies.label': 'Para Ag\u00eancias de Viagem de Luxo',
-          'home.aud.agencies.title': 'Transforme a tarde livre na parte mais memorável da viagem.',
-          'home.aud.agencies.desc': 'Uma presen\u00e7a editorial curada que acompanha o seu cliente durante a explora\u00e7\u00e3o independente \u2014 sem guia, sem custo extra.',
-          'home.aud.agencies.cta': 'Explore a parceria',
-          'home.whatis.title': 'O que \u00e9 isso',
-          'home.whatis.lead': 'Quando voc\u00ea viaja, normalmente vai de um lugar para outro.',
-          'home.whatis.p1': 'Segue mapas.<br>Confere recomenda\u00e7\u00f5es.<br>Tenta n\u00e3o perder nada.',
-          'home.whatis.p2': 'Mas, quando voc\u00ea chega, algo falta.',
-          'home.whatis.p3': 'Ningu\u00e9m realmente mostra <em>como</em> viver o que voc\u00ea est\u00e1 vendo.',
-          'home.whatis.p4': '\u00c9 para isso que existe o Deeply Slow Travel.',
-          'home.how.title': 'Como funciona',
-          'home.how.lead': 'Cada experi\u00eancia foi pensada para ser usada enquanto voc\u00ea caminha \u2014 acess\u00edvel por link, sem necessidade de download.',
-          'home.how.p1': 'Voc\u00ea chega a uma pra\u00e7a.<br>\u00c9 convidado a observar o seu ritmo.<br>Uma camada escondida de hist\u00f3ria emerge por baixo do ordin\u00e1rio.<br>Voc\u00ea olha de novo. O lugar torna-se diferente.',
-          'home.how.p2': 'Isso \u00e9 The Invisible Layer\u2122.',
-          'home.how.cta_heading': 'Viva Lisboa de forma diferente',
-          'home.how.cta': 'Veja um exemplo ao vivo',
+          'home.aud.traveller.title': 'Descubra Lisboa de uma forma que a maioria das pessoas nunca chega verdadeiramente a conhecer.',
+          'home.aud.traveller.desc': 'Percursos cuidadosamente guiados que revelam as camadas invisíveis da cidade e ajudam a reparar naquilo por onde quase toda a gente passa sem notar.',
+          'home.aud.traveller.cta': 'Explorar o Lisbon Companion',
+          'home.aud.hotels.label': 'Para Hotéis Boutique',
+          'home.aud.hotels.title': 'A presença do seu hotel continua, mesmo quando os hóspedes saem para explorar a cidade.',
+          'home.aud.hotels.desc': 'Prolongue a sensação de cuidado, continuidade e atenção para lá das portas do hotel, sem aumentar a complexidade operacional.',
+          'home.aud.hotels.cta': 'Descobrir como funciona',
+          'home.aud.agencies.label': 'Para Agências de Viagens de Luxo',
+          'home.aud.agencies.title': 'Transforme o tempo livre numa das partes mais memoráveis da viagem.',
+          'home.aud.agencies.desc': 'Uma experiência editorial cuidadosamente concebida para acompanhar os seus clientes durante momentos de exploração independente, sem guias, logística adicional ou carga operacional.',
+          'home.aud.agencies.cta': 'Explorar oportunidades de parceria',
+          'home.whatis.title': 'O Que É Isto',
+          'home.whatis.lead': 'Quando viajamos, estamos constantemente a passar de um lugar para outro.',
+          'home.whatis.p1': 'Seguimos mapas.<br>Consultamos recomendações.<br>Tentamos não perder nada.',
+          'home.whatis.p2': 'Mas, quando finalmente chegamos, há muitas vezes qualquer coisa que falta.',
+          'home.whatis.p3': 'Quase ninguém nos mostra realmente como olhar para aquilo que estamos a ver.',
+          'home.whatis.p4': 'É aí que o Deeply Slow Travel começa.',
+          'home.how.title': 'Como Funciona',
+          'home.how.lead': 'Cada experiência foi concebida para ser vivida a caminhar — acessível através de um simples link, sem necessidade de descarregar qualquer aplicação.',
+          'home.how.p1': 'Chega a uma praça.',
+          'home.how.p2': 'A experiência convida-o a parar e reparar no ritmo do lugar.',
+          'home.how.p3': 'Pouco a pouco, uma camada invisível de história começa a emergir por baixo do quotidiano.',
+          'home.how.p4': 'Olha novamente. E o lugar transforma-se.',
+          'home.how.p5': 'É a isso que chamamos The Invisible Layer™.',
+          'home.how.cta': 'Ver um exemplo real',
           'about.title': 'Sobre',
-          'about.lead': 'O Deeply Slow Travel n\u00e3o foi criado num escrit\u00f3rio.',
-          'about.p1': 'Foi moldado nas ruas de Lisboa \u2014 atrav\u00e9s de anos de caminhada, observa\u00e7\u00e3o e orienta\u00e7\u00e3o.',
-          'about.p2': 'Nasce da compreens\u00e3o de que viajar \u00e9 muitas vezes reduzido a uma lista de tarefas, enquanto a cidade real se revela nas pausas.',
-          'about.idea.title': 'A ideia',
-          'about.idea.lead': 'Acreditamos que pequenos momentos, quando vividos com aten\u00e7\u00e3o, podem ser mais significativos do que tentar ver tudo.',
-          'about.idea.p1': 'Por isso criamos experi\u00eancias que ajudam a desacelerar \u2014<br>n\u00e3o no tempo, mas na consci\u00eancia.',
-          'about.idea.p2': 'O ativo defensável aqui n\u00e3o \u00e9 a tecnologia. \u00c9 a percep\u00e7\u00e3o curada \u2014 constru\u00edda ao longo de anos, n\u00e3o gerada em segundos.',
-          'about.founders': 'Criado por Alessandra Velho.',
-          'exp.title': 'A Experi\u00eancia',
-          'exp.structure.title': 'Uma estrutura bem definida',
-          'exp.structure.lead': 'Cada percurso segue a mesma sequ\u00eancia cuidadosamente desenhada \u2014 uma dramaturgia da aten\u00e7\u00e3o.',
-          'exp.step1.title': 'Ancora Sensorial',
-          'exp.step1.desc': 'A experi\u00eancia come\u00e7a com atmosfera, ritmo e percep\u00e7\u00e3o corp\u00f3rea. O viajante sente primeiro. A interpreta\u00e7\u00e3o chega depois.',
-          'exp.step2.title': 'O Detalhe Invis\u00edvel',
-          'exp.step2.desc': 'Um elemento escondido ou despercebido recontextualiza o lugar. Este \u00e9 o n\u00facleo do The Invisible Layer\u2122.',
-          'exp.step3.title': 'Convite \u00e0 Observa\u00e7\u00e3o',
-          'exp.step3.desc': 'Um ato espec\u00edfico de aten\u00e7\u00e3o: parar, comparar, notar, olhar, ouvir. O viajante torna-se participante ativo.',
-          'exp.step4.title': 'Cad\u00edrno Pessoal',
-          'exp.step4.desc': 'Um espa\u00e7o leve para reflex\u00f5es e descobertas pessoais. Em 24 horas, o h\u00f3spede recebe um arquivo curado do seu percurso.',
-          'exp.layer.title': 'The Invisible Layer\u2122',
-          'exp.layer.lead': 'A maioria das pessoas caminha por uma cidade e v\u00ea o que est\u00e1 vis\u00edvel.',
-          'exp.layer.p1': 'O The Invisible Layer\u2122 revela o que n\u00e3o est\u00e1 \u2014 a hist\u00f3ria por baixo das pedras, o detalhe que a maioria n\u00e3o nota.',
-          'exp.layer.p2': 'N\u00e3o \u00e9 mais informa\u00e7\u00e3o. \u00c9 uma qualidade diferente de aten\u00e7\u00e3o.',
-          'exp.cta': 'Veja na pr\u00e1tica',
-          'exp.multi.title': 'M\u00faltiplos modos',
-          'exp.multi.p1': 'A experi\u00eancia adapta-se a diferentes comportamentos de viagem. O mesmo conte\u00fado pode ser acedido por \u00e1udio, leitura curta ou convites m\u00ednimos.',
-          'exp.multi.p2': 'Casais a caminhar juntos. Ru\u00eddo urbano. Diferentes n\u00edveis de conforto com auscultadores. O n\u00facleo editorial permanece constante. Apenas o formato se adapta.',
-          'demo.title': 'The Invisible Layer\u2122 \u2014 Na Pr\u00e1tica',
-          'demo.lead': 'O que se segue \u00e9 um \u00fanico momento do Lisbon Companion \u2014 uma paragem, vivida exatamente como o seu h\u00f3spede a encontraria.',
-          'demo.sublead': 'Isto \u00e9 o que o The Invisible Layer\u2122 parece na pr\u00e1tica.',
-          'demo.step1.label': 'Passo 1 \u2014 Chegada',
-          'demo.step1.title': 'Pra\u00e7a da Figueira, Lisboa.',
-          'demo.step1.p1': 'Est\u00e1 na margem de uma das pra\u00e7as mais movimentadas de Lisboa. T\u00e1xis a cortar caminho. Tuk-tuks a negociar espa\u00e7os apertados. Grupos de turistas seguindo bandeiras coloridas.',
-          'demo.step1.p2': 'Ainda n\u00e3o se mova.',
-          'demo.step1.p3': 'Fique im\u00f3vel por um minuto. Deixe o movimento acontecer \u00e0 sua volta. Note o ritmo da pra\u00e7a \u2014 n\u00e3o o ru\u00eddo, mas o padr\u00e3o por baixo dele.',
-          'demo.step1.p4': 'Quando sentir o ritmo, est\u00e1 pronto.',
-          'demo.step2.label': 'Passo 2 \u2014 The Invisible Layer\u2122',
-          'demo.step2.title': 'Por baixo desta pra\u00e7a existe uma cidade dentro de uma cidade.',
-          'demo.step2.p1': 'Por baixo do ch\u00e3o onde est\u00e1 a pisar existiu o maior hospital medieval de Lisboa \u2014 o Hospital Real de Todos os Santos. Constru\u00eddo no s\u00e9culo XV, tinha claustros, enfermarias, capelas e jardins.',
-          'demo.step2.p2': 'Na manh\u00e3 do dia 1 de novembro de 1755 \u2014 Dia de Todos os Santos \u2014 um terramoto atingiu Lisboa. Os inc\u00eandios que se seguiram duraram cinco dias. O hospital foi completamente destru\u00eddo.',
-          'demo.step2.p3': 'Nenhuma placa assinala o local. Nenhuma ru\u00edna \u00e9 vis\u00edvel. O ch\u00e3o absorveu tudo. A cidade foi reconstru\u00edda por cima.',
-          'demo.step2.p4': 'Quase todos os que a atravessam hoje n\u00e3o fazem ideia.',
-          'demo.step3.label': 'Passo 3 \u2014 A sua Observa\u00e7\u00e3o',
-          'demo.step3.title': 'Agora olhe para baixo.',
-          'demo.step3.p1': 'A pedra por baixo dos seus p\u00e9s foi assente sobre escombros, sobre cinzas, sobre o que foi outrora um lugar de cuidado para os doentes da Lisboa medieval.',
-          'demo.step3.p2': 'As pessoas que atravessam esta pra\u00e7a agora mesmo \u2014 nenhuma delas sabe o que est\u00e1 a pisar.',
-          'demo.step3.prompt.label': 'O seu convite',
-          'demo.step3.prompt.text': 'Como \u00e9 que se sente ao estar num lugar onde tanto aconteceu, e onde quase nada resta? N\u00e3o a hist\u00f3ria \u2014 o sentimento. Fique com ele por um momento antes de continuar.',
-          'demo.step4.label': 'Passo 4 \u2014 O seu Cad\u00edrno',
-          'demo.step4.title': 'Este momento \u00e9 seu.',
-          'demo.step4.p1': 'No Lisbon Companion, \u00e9 aqui que o seu h\u00f3spede escreve \u2014 n\u00e3o uma avalia\u00e7\u00e3o, mas uma impress\u00e3o pessoal.',
-          'demo.step4.p2': 'Estas reflex\u00f5es s\u00e3o guardadas de forma privada ao longo do percurso. Em 24 horas, o seu h\u00f3spede recebe um arquivo pessoal \u2014 entregue discretamente, com o seu nome.',
-          'demo.step4.p3': 'N\u00e3o \u00e9 um recibo. N\u00e3o \u00e9 um question\u00e1rio. \u00c9 uma mem\u00f3ria.',
-          'demo.cta.title': 'Este \u00e9 um momento.<br>A experi\u00eancia completa tem sete.',
-          'demo.cta.p1': 'Sete ritmos. Sete bairros. Um retrato coerente de Lisboa que nenhum mapa consegue oferecer.',
-          'demo.cta.p2': 'Isto \u00e9 o que os seus h\u00f3spedes vivenciariam. E \u00e9 isto que a sua marca os acompanharia.',
-          'demo.cta.btn': 'Junte-se ao programa piloto',
-          'demo.cta.btn2': 'Explore o Lisbon Companion',
+          'about.lead': 'O Deeply Slow Travel nasceu de anos a caminhar por Lisboa sem pressa.',
+          'about.p1': 'Não para coleccionar atrações.',
+          'about.p2': 'Nem para “ver” a cidade inteira.',
+          'about.p3': 'Apenas para prestar atenção.',
+          'about.p4': 'Certos lugares continuavam a revelar-se lentamente — através da luz, do ritmo, do silêncio, da repetição e de pequenos detalhes por onde quase toda a gente passava sem reparar.',
+          'about.p5': 'Com o tempo, percebi que aquilo que procurava nas viagens não era mais informação.',
+          'about.p6': 'Era uma forma diferente de atenção.',
+          'about.p7': 'O Deeply Slow Travel cresceu a partir dessa ideia.',
+          'about.p8': 'O projecto combina caminhadas, narrativa editorial, observação sensorial e investigação histórica para criar experiências que ajudam os viajantes a viver as cidades de forma mais profunda e mais pessoal.',
+          'about.p9': 'Cada percurso é desenhado lentamente, a pé, através da observação repetida da forma como os lugares se sentem, mudam, soam e se revelam ao longo do tempo.',
+          'about.p10': 'Porque as viagens verdadeiramente memoráveis raramente nascem de ver mais.',
+          'about.p11': 'Nascem de aprender a reparar de forma diferente.',
+          'about.founder.name': 'Alessandra Velho',
+          'about.founder.title': 'Founder & Creative Director, Deeply Slow Travel',
+          'exp.title': 'A Experiência',
+          'exp.structure.title': 'Uma Jornada Estruturada',
+          'exp.structure.lead': 'Cada percurso segue a mesma sequência cuidadosamente desenhada — uma verdadeira dramaturgia da atenção.',
+          'exp.step1.title': 'Âncora Sensorial',
+          'exp.step1.desc': 'A experiência começa pela atmosfera, pelo ritmo e pela percepção corporal. O viajante sente primeiro o lugar. A interpretação surge depois.',
+          'exp.step2.title': 'O Detalhe Invisível',
+          'exp.step2.desc': 'Um elemento escondido ou facilmente ignorado transforma completamente a forma como o lugar é percebido.<br>Este é o coração da The Invisible Layer™ — o momento por onde quase toda a gente passa sem nunca reparar.',
+          'exp.step3.title': 'Convite à Observação',
+          'exp.step3.desc': 'Um gesto simples de atenção: parar, comparar, reparar, escutar, voltar a olhar.<br>O viajante deixa de ser apenas um observador passivo da cidade e começa verdadeiramente a participar nela.',
+          'exp.step4.title': 'Caderno Pessoal',
+          'exp.step4.desc': 'Um espaço privado para reflexões e descobertas pessoais.<br>No prazo de 24 horas, cada viajante recebe um arquivo digital com os momentos guardados ao longo do percurso, entregue discretamente, como uma memória duradoura.',
+          'exp.layer.title': 'The Invisible Layer™',
+          'exp.layer.lead': 'A maioria das pessoas atravessa uma cidade vendo apenas aquilo que é visível.',
+          'exp.layer.p1': 'A The Invisible Layer™ revela aquilo que normalmente permanece escondido — a história sob a calçada, os detalhes que quase toda a gente ignora, os ritmos que só aparecem quando alguém abranda o suficiente para reparar neles.',
+          'exp.layer.p2': 'Não se trata de mais informação.',
+          'exp.layer.p3': 'Trata-se de uma qualidade diferente de atenção.',
+          'exp.cta': 'Ver na prática',
+          'exp.multi.title': 'Diferentes Formas de Explorar',
+          'exp.multi.p1': 'A experiência adapta-se naturalmente a diferentes formas de viver a cidade.',
+          'exp.multi.p2': 'O mesmo percurso pode ser experienciado através de áudio, leitura curta ou pequenos convites à observação.',
+          'exp.multi.p3': 'Casais que caminham juntos. Ruído urbano. Pessoas que preferem ouvir. Outras que preferem ler.',
+          'exp.multi.p4': 'O núcleo editorial mantém-se sempre o mesmo. Apenas o formato muda.',
+          'demo.title': 'The Invisible Layer™ — Na Prática',
+          'demo.lead': 'O que se segue é um momento real do Lisbon Companion — vivido exactamente da forma como acontece durante o percurso.',
+          'demo.step1.label': 'Passo 1 — Chegar',
+          'demo.step1.title': 'Praça da Figueira, Lisboa.',
+          'demo.step1.p1': 'Está numa das praças mais movimentadas da cidade. Táxis a cortar o trânsito. Tuk-tuks a passar por espaços improváveis. Grupos turísticos a seguir bandeiras coloridas.',
+          'demo.step1.p2': 'Não se mova ainda.',
+          'demo.step1.p3': 'Fique parado durante um minuto.',
+          'demo.step1.p4': 'Deixe o movimento acontecer à sua volta. Repare no ritmo da praça — não no ruído em si, mas no padrão por baixo dele. A forma como as pessoas atravessam sem olhar. O movimento estranhamente coreografado dos pombos.',
+          'demo.step1.p5': 'Quando sentir esse ritmo, continue.',
+          'demo.step2.label': 'Passo 2 — The Invisible Layer™',
+          'demo.step2.title': 'Debaixo desta praça existe outra cidade.',
+          'demo.step2.p1': 'Sob os seus pés existiu em tempos o maior hospital medieval de Lisboa — o Hospital Real de Todos os Santos. Construído no século XV, tinha claustros, enfermarias, capelas e jardins. Durante séculos, foi uma das instituições médicas mais avançadas da Europa.',
+          'demo.step2.p2': 'Na manhã de 1 de Novembro de 1755 — Dia de Todos os Santos — um terramoto atingiu Lisboa. Os incêndios que se seguiram duraram cinco dias.',
+          'demo.step2.p3': 'O hospital desapareceu por completo.',
+          'demo.step2.p4': 'Hoje não existe qualquer placa. Nenhuma ruína visível. Nenhum sinal evidente do que aqui existiu.',
+          'demo.step2.p5': 'A cidade foi reconstruída por cima dele.',
+          'demo.step2.p6': 'E a praça tornou-se apenas mais uma praça.',
+          'demo.step2.p7': 'Para quase toda a gente.',
+          'demo.step3.label': 'Passo 3 — A Sua Observação',
+          'demo.step3.title': 'Agora olhe para o chão.',
+          'demo.step3.p1': 'A pedra sob os seus pés foi colocada sobre cinzas, escombros e séculos de história invisível.',
+          'demo.step3.p2': 'As pessoas que atravessam esta praça neste momento não fazem ideia do que aqui existiu.',
+          'demo.step3.p3': 'E, no entanto, de alguma forma, tudo continua presente.',
+          'demo.step3.p4': 'Fique com esse pensamento durante alguns instantes antes de seguir caminho.',
+          'demo.step4.label': 'Passo 4 — O Seu Caderno',
+          'demo.step4.title': 'Este momento pertence-lhe.',
+          'demo.step4.p1': 'No Lisbon Companion, é aqui que escreve — não uma avaliação nem uma legenda, mas uma impressão pessoal.',
+          'demo.step4.p2': 'Uma frase. Uma palavra. Aquilo que surgir.',
+          'demo.step4.p3': 'Ao longo do percurso, estas reflexões são guardadas discretamente.',
+          'demo.step4.p4': 'No prazo de 24 horas, recebe um arquivo pessoal com tudo aquilo em que reparou ao longo do caminho.',
+          'demo.step4.p5': 'Não é um recibo. Nem um questionário.',
+          'demo.step4.p6': 'É uma memória.',
+          'demo.cta.title': 'Isto é apenas um momento. A experiência completa contém sete.',
+          'demo.cta.p1': 'Sete ritmos. Sete bairros. Uma forma diferente de experienciar Lisboa.',
+          'demo.cta.btn1': 'Explorar o Lisbon Companion',
+          'demo.cta.btn2': 'Trabalhar connosco',
           'lisbon.title': 'Lisbon Companion',
-          'lisbon.lead': 'A nossa primeira experi\u00eancia \u2014 e a nossa prova de conceito.',
-          'lisbon.p1': 'Um conjunto curado de percursos guiados por Lisboa, estruturado em torno de sete ritmos distintos da cidade.',
+          'lisbon.lead': 'A nossa primeira experiência — e a prova de conceito do projecto.',
+          'lisbon.p1': 'Uma série curada de percursos por Lisboa, estruturada em torno de sete ritmos distintos da cidade.',
           'lisbon.rhythms.title': 'Sete Ritmos',
-          'lisbon.rhythms.lead': 'Lisboa n\u00e3o se move num \u00fanico ritmo. Cada bairro tem o seu pr\u00f3prio modo de aten\u00e7\u00e3o.',
-          'lisbon.r1': '<strong>Ritmo dos Sentidos</strong> \u2014 Baixa \u00b7 Chiado \u00b7 Bairro Alto \u00b7 Pr\u00edncipe Real',
-          'lisbon.r2': '<strong>Ritmo das Ruas</strong> \u2014 Alfama \u00b7 Gra\u00e7a \u00b7 Mouraria',
-          'lisbon.r3': '<strong>Ritmo das Pessoas</strong> \u2014 Intendente \u00b7 Anjos \u00b7 Arroios',
-          'lisbon.r4': '<strong>Ritmo da Luz</strong> \u2014 Santos \u00b7 Alc\u00e2ntara \u00b7 Bel\u00e9m',
-          'lisbon.r5': '<strong>Ritmo do Sil\u00eancio</strong> \u2014 Lapa \u00b7 Estrela \u00b7 Campo de Ourique',
-          'lisbon.r6': '<strong>Ritmo Interior</strong> \u2014 Tapada das Necessidades \u00b7 Ajuda \u00b7 Monsanto',
-          'lisbon.r7': '<strong>Ritmo das Surpresas</strong> \u2014 Marvila \u00b7 Beato \u00b7 Xabregas',
-          'lisbon.get.title': 'O que encontra',
-          'lisbon.get.li1': 'Percursos de caminhada cuidadosamente curados em sete ritmos da cidade',
-          'lisbon.get.li2': '\u00c1udio de orienta\u00e7\u00e3o para cada local',
-          'lisbon.get.li3': 'Narrativa contextual baseada em pesquisa editorial',
-          'lisbon.get.li4': 'Convites de observa\u00e7\u00e3o que orientam a aten\u00e7\u00e3o em tempo real',
-          'lisbon.get.li5': 'Cad\u00edrno pessoal com entrega de mem\u00f3ria p\u00f3s-percurso em 24 horas',
-          'lisbon.get.li6': 'Acess\u00edvel por link \u2014 sem download, sem registo',
-          'lisbon.practice.title': 'Na pr\u00e1tica',
-          'lisbon.practice.lead': 'Voc\u00ea chega a uma pra\u00e7a.',
-          'lisbon.practice.p1': '\u00c0 primeira vista, \u00e9 apenas movimento \u2014 pessoas, sons, momentos que passam.',
-          'lisbon.practice.p2': 'A experi\u00eancia convida-o a observar o seu ritmo.',
-          'lisbon.practice.p3': 'Depois revela algo que j\u00e1 n\u00e3o \u00e9 vis\u00edvel.',
-          'lisbon.practice.p4': '\u00c9 convidado a olhar de novo.',
-          'lisbon.practice.p5': 'E de repente, o lugar parece completamente diferente.',
-          'lisbon.practice.cta': 'Veja um exemplo ao vivo',
-          'partners.title': 'Para Hot\u00e9is e Ag\u00eancias',
-          'partners.lead': 'No momento em que o seu h\u00f3spede sai do hotel, a sua presen\u00e7a desaparece. O Deeply Slow Travel muda isso \u2014 sem adicionar complexidade operacional.',
-          'partners.p1': 'Oferecemos uma experi\u00eancia digital curada e pronta a usar, que a sua equipa pode oferecer aos h\u00f3spedes no momento da partida.',
-          'partners.how.title': 'Como funciona o piloto',
-          'partners.how.p1': 'Ao sa\u00edrem para explorar a cidade, os h\u00f3spedes recebem um pequeno cart\u00e3o com um c\u00f3digo QR e um breve convite:',
-          'partners.how.quote': '\u201cLisboa revela-se devagar. Esta jornada come\u00e7a mesmo al\u00e9m destas portas.\u201d',
-          'partners.how.p2': 'Sempre que poss\u00edvel, um membro da sua equipa apresenta a experi\u00eancia em menos de 30 segundos.',
-          'partners.how.p3': 'Em 24 horas ap\u00f3s o percurso, o h\u00f3spede recebe um arquivo pessoal das suas reflex\u00f5es \u2014 entregue com o seu nome.',
-          'partners.agencies.title': 'Para Ag\u00eancias de Viagem de Luxo',
-          'partners.agencies.p1': 'Todos os itin\u00e9r\u00e1rios de luxo t\u00eam lacunas \u2014 a tarde livre, a manh\u00e3 antes do programa come\u00e7ar, a noite sem guia.',
-          'partners.agencies.p2': 'O Lisbon Companion preenche essas lacunas com uma presen\u00e7a editorial curada que acompanha o seu cliente durante toda a explora\u00e7\u00e3o independente.',
-          'partners.agencies.p3': 'O resultado \u00e9 um cliente que regressa de Lisboa tendo vivido a cidade a um n\u00edvel de profundidade que a maioria dos viajantes nunca atinge.',
-          'partners.cta': 'Junte-se ao programa piloto',
-          'contact.title': 'Contato',
-          'contact.lead': 'Se quiser saber mais \u2014 ou explorar uma parceria piloto:',
-          'contact.note': 'Estamos a selecionar um n\u00famero muito limitado de parceiros piloto para o Lisbon Companion. Se representa um hotel boutique ou uma ag\u00eancia de viagens de luxo com opera\u00e7\u00f5es em Lisboa, temos muito prazer em ouvi-lo.'
+          'lisbon.rhythms.lead': 'Lisboa não se move num único ritmo. Cada bairro pede uma forma diferente de atenção.',
+          'lisbon.r1.title': 'Ritmo dos Sentidos',
+          'lisbon.r1.areas': 'Baixa · Chiado · Bairro Alto · Príncipe Real',
+          'lisbon.r1.desc': 'Onde tudo começa. A textura da calçada, a mudança da luz, o movimento das praças, a sensação de uma cidade construída sobre muitas outras.',
+          'lisbon.r2.title': 'Ritmo das Ruas',
+          'lisbon.r2.areas': 'Alfama · Graça · Mouraria',
+          'lisbon.r2.desc': 'A parte mais antiga da cidade. Ruelas medievais, muralhas mouriscas, ruas que ainda carregam séculos dentro delas.',
+          'lisbon.r3.title': 'Ritmo das Pessoas',
+          'lisbon.r3.areas': 'Intendente · Anjos · Arroios',
+          'lisbon.r3.desc': 'Uma Lisboa em transformação, onde novas vozes convivem com histórias muito mais antigas.',
+          'lisbon.r4.title': 'Ritmo da Luz',
+          'lisbon.r4.areas': 'Santos · Alcântara · Belém',
+          'lisbon.r4.desc': 'A cidade abre-se ao rio. O tempo abranda. O Tejo torna-se mais do que um cenário.',
+          'lisbon.r5.title': 'Ritmo do Silêncio',
+          'lisbon.r5.areas': 'Lapa · Estrela · Campo de Ourique',
+          'lisbon.r5.desc': 'Uma Lisboa mais tranquila, feita de ruas residenciais, árvores e pequenos gestos que quase passam despercebidos.',
+          'lisbon.r6.title': 'Ritmo Interior',
+          'lisbon.r6.areas': 'Tapada das Necessidades · Ajuda · Monsanto',
+          'lisbon.r6.desc': 'Espaços verdes, memória, respiração. Para quem prefere sentir a cidade em vez de apenas a ver.',
+          'lisbon.r7.title': 'Ritmo das Surpresas',
+          'lisbon.r7.areas': 'Marvila · Beato · Xabregas',
+          'lisbon.r7.desc': 'Uma Lisboa em mudança — que recompensa quem chega sem expectativas rígidas.',
+          'partners.title': 'Parceiros',
+          'partners.overview.lead': 'Dois públicos. Uma visão comum sobre a forma de viajar.',
+          'partners.overview.p1': 'Trabalhamos tanto com hotéis boutique como com agências de viagens de luxo — cada um à sua maneira, cada um com necessidades diferentes.',
+          'partners.overview.cta1': 'Prolongar a experiência do hóspede para além do hotel',
+          'partners.overview.cta2': 'Prolongar a experiência do cliente para além do itinerário',
+          'partners.hotels.title': 'Para Hotéis Boutique',
+          'partners.hotels.lead': 'Prolongue a experiência do hóspede para além do hotel.',
+          'partners.hotels.p1': 'No momento em que os hóspedes começam a explorar a cidade de forma independente, a maioria das marcas de hospitalidade desaparece da experiência.',
+          'partners.hotels.p2': 'O Deeply Slow Travel permite que essa presença continue através de momentos cuidadosamente guiados de atenção, descoberta e memória.',
+          'partners.hotels.p3': 'Sem downloads de aplicações. Sem complexidade operacional. Sem necessidade de mais equipa.',
+          'partners.hotels.p4': 'Apenas uma experiência cuidadosamente desenhada que acompanha os hóspedes pela cidade.',
+          'partners.common.how.title': 'Como Funciona',
+          'partners.hotels.how.p1': 'Quando os hóspedes saem para explorar Lisboa, recebem um pequeno cartão impresso com um código QR e um breve convite:',
+          'partners.hotels.how.quote': '"Lisboa revela-se lentamente. Esta viagem começa logo para lá destas portas."',
+          'partners.hotels.how.p2': 'Um membro da equipa apresenta a experiência em menos de 30 segundos.',
+          'partners.hotels.how.p3': 'Os hóspedes saem com o percurso já aberto, o primeiro momento já activado e a experiência já em movimento.',
+          'partners.hotels.how.p4': 'É tudo o que a sua equipa precisa de fazer.',
+          'partners.hotels.how.p5': 'Podemos adaptar a forma de apresentação ao cliente à cultura e ao funcionamento operacional do seu hotel.',
+          'partners.hotels.exp.title': 'O Que os Hóspedes Vivem',
+          'partners.common.guide': 'Isto não é um guia turístico tradicional.',
+          'partners.hotels.exp.p1': 'A experiência foi desenhada como uma dramaturgia da atenção — combinando atmosfera, detalhe invisível, observação e reflexão.',
+          'partners.hotels.exp.p2': 'Uma praça revela uma história esquecida. Uma rua ganha profundidade emocional. Um passeio transforma-se numa memória que continua muito depois da viagem terminar.',
+          'partners.hotels.exp.p3': 'No prazo de 24 horas, os hóspedes recebem um arquivo pessoal das suas descobertas e reflexões — entregue discretamente em nome do seu hotel.',
+          'partners.common.memory': 'Não é um questionário. É uma memória.',
+          'partners.hotels.layers.title': 'Em Cada Local — As Quatro Camadas',
+          'partners.hotels.layers.lead': 'Cada paragem do Lisbon Companion segue a mesma estrutura. Os seus hóspedes irão experienciar:',
+          'partners.hotels.layer1.title': 'Âncora Sensorial',
+          'partners.hotels.layer1.desc': 'A experiência nunca começa com informação. Começa pela atmosfera, pelo ritmo e pela percepção corporal. Os hóspedes chegam primeiro. A compreensão vem depois.',
+          'partners.hotels.layer2.title': 'O Detalhe Invisível',
+          'partners.hotels.layer2.desc': 'Um elemento escondido transforma completamente o lugar. Este é o coração da The Invisible Layer™ — algo por onde quase toda a gente passa sem reparar.',
+          'partners.hotels.layer3.title': 'Convite à Observação',
+          'partners.hotels.layer3.desc': 'Um gesto simples de atenção: parar, comparar, reparar, escutar. Os hóspedes deixam de ser observadores passivos e tornam-se participantes na cidade.',
+          'partners.hotels.layer4.title': 'Caderno Pessoal',
+          'partners.hotels.layer4.desc': 'Um espaço privado para reflexões. No prazo de 24 horas, os hóspedes recebem um arquivo digital com tudo aquilo em que repararam entregue discretamente em nome do seu hotel.',
+          'partners.hotels.after.title': 'Depois do Percurso',
+          'partners.hotels.after.p1': 'A experiência não termina quando os hóspedes regressam ao hotel.',
+          'partners.hotels.after.p2': 'No prazo de 24 horas, cada hóspede recebe um arquivo pessoal das suas descobertas e reflexões — cada observação guardada, cada momento notado, cada pensamento registado ao longo do percurso.',
+          'partners.hotels.after.p3': 'Este arquivo é entregue discretamente em nome do seu hotel.',
+          'partners.hotels.after.p4': 'Não é um questionário. Não são dados operacionais. É uma memória: um vestígio tangível de uma experiência mais profunda da cidade, proporcionada pela sua marca.',
+          'partners.hotels.after.p5': 'É o único ponto de contacto pós-viagem que os seus hóspedes irão receber — e chega como um presente, não como uma solicitação.',
+          'partners.common.rhythms.title': 'Sete Ritmos de Lisboa',
+          'partners.hotels.rhythms.lead': 'Lisboa não se move num único ritmo. Cada bairro pede uma forma diferente de atenção. Os seus hóspedes terão acesso a sete formas distintas de experienciar a cidade — cada uma desenhada em torno de um bairro e de uma qualidade específica de atenção.',
+          'partners.agencies.title': 'Para Agências de Viagens de Luxo',
+          'partners.common.work.title': 'Trabalhe Connosco',
+          'partners.common.work.cta': 'Entrar em contacto',
+          'partners.hotels.work.p1': 'Colaboramos com um número cuidadosamente seleccionado de parceiros de hospitalidade que partilham uma visão semelhante sobre aquilo que as viagens podem ser.',
+          'partners.hotels.work.p2': 'Se sente que essa visão está alinhada com o seu hotel, teremos todo o gosto em conversar consigo.',
+          'partners.agencies.lead': 'Prolongue a experiência do cliente para além do itinerário.',
+          'partners.agencies.p1': 'Todos os itinerários cuidadosamente planeados contêm momentos não estruturados — uma tarde livre, uma noite sem guia, tempo entre experiências.',
+          'partners.agencies.p2': 'A maioria das agências preenche esses momentos com recomendações de restaurantes ou locais para visitar de forma independente.',
+          'partners.agencies.p3': 'O Deeply Slow Travel preenche-os com algo mais significativo — uma experiência editorial curada que acompanha os seus clientes durante momentos de exploração independente.',
+          'partners.agencies.p4': 'Os seus clientes vivem Lisboa com uma profundidade a que a maioria dos viajantes nunca chega. Regressam com memórias, não apenas com impressões. E associam essa profundidade à sua agência — não a uma aplicação genérica ou a um guia turístico comum.',
+          'partners.agencies.p5': 'Sem logística adicional. Sem guias. Sem complexidade operacional.<br><br>Apenas uma experiência cuidadosamente desenhada que acompanha os seus clientes pela cidade.',
+          'partners.agencies.how.p1': 'No momento certo da viagem do cliente — seja à chegada, durante uma reunião de planeamento ou antes de um período de exploração independente — a sua equipa fornece acesso à experiência com uma breve explicação de como funciona.',
+          'partners.agencies.how.p2': 'Os clientes ficam depois livres para começar quando quiserem e para viver a experiência ao seu próprio ritmo.',
+          'partners.agencies.how.p3': 'Como cada agência funciona de forma diferente, adaptamos a apresentação da experiência aos seus processos e à forma como trabalha com os seus clientes.',
+          'partners.agencies.exp.title': 'O Que os Clientes Vivem',
+          'partners.agencies.exp.p1': 'A experiência está estruturada como uma dramaturgia da atenção — combinando atmosfera, detalhe invisível, observação e reflexão.',
+          'partners.agencies.exp.p2': 'Uma praça ganha camadas de história invisível. Uma rua torna-se emocionalmente memorável. Uma tarde transforma-se em algo em que os clientes continuam a pensar muito depois de regressarem a casa.',
+          'partners.agencies.exp.p3': 'No prazo de 24 horas, os clientes recebem um arquivo digital pessoal das suas reflexões e descobertas — entregue discretamente em nome da sua agência.',
+          'partners.agencies.rhythms.lead': 'Lisboa não se move num único ritmo. Cada bairro pede uma forma diferente de atenção. Os seus clientes terão acesso a sete formas distintas de experienciar a cidade — cada uma desenhada em torno de um bairro e de uma qualidade específica de atenção.',
+          'partners.agencies.work.p1': 'Colaboramos com um número cuidadosamente seleccionado de agências de viagens que partilham uma visão semelhante sobre aquilo que as viagens podem ser.',
+          'partners.agencies.work.p2': 'Se sente que essa visão está alinhada com a sua agência, teremos todo o gosto em conversar consigo.',
+          'contact.title': 'Contacto',
+          'contact.lead': 'Se gostaria de saber mais — ou explorar uma possível colaboração:',
+          'contact.note': 'Teremos todo o gosto em ouvir hotéis boutique, agências de viagens de luxo e viajantes que procuram experienciar Lisboa de forma diferente.'
         }
       };
       var slugs = {
-        en: { home: '', about: 'about', experience: 'experience', demo: 'demo', lisbon: 'lisbon', partners: 'partners', contact: 'contact' },
-        pt: { home: '', about: 'sobre', experience: 'experiencia', demo: 'pratica', lisbon: 'lisbon', partners: 'parceiros', contact: 'contato' }
+        en: { home: '', about: 'about', experience: 'experience', demo: 'demo', lisbon: 'lisbon', partners: 'partners', 'partners-hotels': 'partners/hotels', 'partners-agencies': 'partners/travel-agencies', contact: 'contact' },
+        pt: { home: '', about: 'sobre', experience: 'experiencia', demo: 'pratica', lisbon: 'lisbon', partners: 'parceiros', 'partners-hotels': 'parceiros/hoteis', 'partners-agencies': 'parceiros/agencias-de-viagens', contact: 'contato' }
       };
       var reverseSlug = {
-        en: { '': 'home', 'about': 'about', 'experience': 'experience', 'demo': 'demo', 'lisbon': 'lisbon', 'partners': 'partners', 'contact': 'contact' },
-        pt: { '': 'home', 'sobre': 'about', 'experiencia': 'experience', 'pratica': 'demo', 'lisbon': 'lisbon', 'parceiros': 'partners', 'contato': 'contact' }
+        en: { '': 'home', 'about': 'about', 'experience': 'experience', 'demo': 'demo', 'lisbon': 'lisbon', 'partners': 'partners', 'partners/hotels': 'partners-hotels', 'partners/travel-agencies': 'partners-agencies', 'contact': 'contact' },
+        pt: { '': 'home', 'sobre': 'about', 'experiencia': 'experience', 'pratica': 'demo', 'lisbon': 'lisbon', 'parceiros': 'partners', 'parceiros/hoteis': 'partners-hotels', 'parceiros/agencias-de-viagens': 'partners-agencies', 'contato': 'contact' }
       };
       var navbar = document.getElementById('navbar');
       var navLinks = document.getElementById('navLinks');
@@ -1242,8 +1510,8 @@
       function applyTranslations(lang) { document.querySelectorAll('[data-i18n]').forEach(function (el) { var key = el.getAttribute('data-i18n'); if (T[lang] && T[lang][key] !== undefined) el.innerHTML = T[lang][key]; }); document.documentElement.lang = lang; }
       function setLang(lang, updateUrl) { if (updateUrl === undefined) updateUrl = true; currentLang = lang; applyTranslations(lang); langSwitch.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-lang') === lang); }); if (updateUrl) buildAndPushUrl(currentPage, true); }
       function buildAndPushUrl(pageId, push) { var slug = slugs[currentLang][pageId] || ''; var hash = slug ? currentLang + '/' + slug : currentLang; if (push) history.pushState({ lang: currentLang, page: pageId }, '', '#' + hash); else history.replaceState({ lang: currentLang, page: pageId }, '', '#' + hash); }
-      function navigateTo(pageId, pushState) { if (pushState === undefined) pushState = true; var target = document.getElementById('page-' + pageId); if (!target) return; currentPage = pageId; pages.forEach(function (p) { p.classList.remove('active'); }); target.classList.add('active'); navLinkItems.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-page') === pageId); }); footerLinkItems.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-page') === pageId); }); window.scrollTo({ top: 0, behavior: 'instant' }); if (pushState) buildAndPushUrl(pageId, true); navLinks.classList.remove('open'); hamburger.classList.remove('open'); }
-      function parseHash() { var hash = window.location.hash.slice(1); if (!hash) return { lang: '', page: '' }; var parts = hash.split('/'); var lang = parts[0]; if (lang !== 'en' && lang !== 'pt') return { lang: '', page: '' }; var slug = parts[1] || ''; var page = (reverseSlug[lang] && reverseSlug[lang][slug]) || 'home'; return { lang: lang, page: page }; }
+      function navigateTo(pageId, pushState) { if (pushState === undefined) pushState = true; var target = document.getElementById('page-' + pageId); if (!target) return; var activeNavPage = pageId.indexOf('partners-') === 0 ? 'partners' : pageId; currentPage = pageId; pages.forEach(function (p) { p.classList.remove('active'); }); target.classList.add('active'); navLinkItems.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-page') === activeNavPage); }); footerLinkItems.forEach(function (a) { a.classList.toggle('active', a.getAttribute('data-page') === activeNavPage); }); window.scrollTo({ top: 0, behavior: 'instant' }); if (pushState) buildAndPushUrl(pageId, true); navLinks.classList.remove('open'); hamburger.classList.remove('open'); }
+      function parseHash() { var hash = window.location.hash.slice(1); if (!hash) return { lang: '', page: '' }; var parts = hash.split('/'); var lang = parts[0]; if (lang !== 'en' && lang !== 'pt') return { lang: '', page: '' }; var slug = parts.slice(1).join('/'); var page = (reverseSlug[lang] && reverseSlug[lang][slug]) || 'home'; return { lang: lang, page: page }; }
       function detectLang() { var nav = navigator.language || navigator.userLanguage || 'en'; return /^pt\b/i.test(nav) ? 'pt' : 'en'; }
       document.addEventListener('click', function (e) { var anchor = e.target.closest('[data-page]'); if (anchor) { e.preventDefault(); var page = anchor.getAttribute('data-page'); if (page) navigateTo(page); } });
       langSwitch.addEventListener('click', function (e) { var anchor = e.target.closest('[data-lang]'); if (anchor) { var lang = anchor.getAttribute('data-lang'); if (lang && lang !== currentLang) setLang(lang); } });

@@ -2852,12 +2852,3 @@ Na versão anterior tinha um parágrafo próprio dentro da página Partners a ex
 Tudo o resto está melhor do que qualquer versão anterior. Quer que produza a versão final incorporando estes quatro elementos em falta, mantendo exactamente o tom e a voz desta versão?Você disse: Pode refazer o documento, mas não decidimos no item 3 não entrar em muitos detalhes no site sobre o piloto?Pode refazer o documento, mas não decidimos no item 3 não entrar em muitos detalhes no site sobre o piloto?15:49Claude respondeu: Tem razão — peço desculpa pela confusão.Tem razão — peço desculpa pela confusão. O post-trip memory layer não tem nada a ver com o piloto. É uma funcionalidade do produto em si — o arquivo pessoal que o hóspede recebe 24 horas depois da caminhada, entregue sob o nome do parceiro.
 O que decidimos retirar foi qualquer referência a piloto, valores, e detalhes comerciais. O after the walk é conteúdo de produto, não de processo comercial — e é um dos argumentos mais fortes para o parceiro precisamente porque é concreto e diferenciador.
 Avanço com o documento completo incorporando os quatro elementos em falta, mantendo o tom e a voz desta última versão?
-
-
----
-
-Pls update index.html's English and Portuguese text content, using **exactly** the words in the two 'final-text' markdown files.
-
-Please note that there are a few new sections. But the basic structure of the website remains the same.
-
-Do not change or remove any images, and do not change the CSS styling. Do not change the JavaScript systems. All you need to do is accurately update the en and pt text content, and adjust the website's sections.
