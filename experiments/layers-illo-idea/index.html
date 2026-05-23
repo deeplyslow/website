@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layers Illustration Idea</title>
+
+    <style>
+        :root {
+            --first-left: 214;
+            --first-right: 228;
+            --second-left: 14;
+            --second-right: 23;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #FFF1D4;
+        }
+
+        h1 {
+            color: hsl(var(--first-left), 89%, 33%);
+            margin-bottom: 40px;
+        }
+
+        .layered-illo div {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            max-width: 1408px;
+            aspect-ratio: 1;
+        }
+
+        .blue {
+            z-index: -1;
+            background: linear-gradient(to top right, white, white 40%, hsl(var(--first-left), 89%, 33%) 50%, hsl(var(--first-right), 89%, 38%));
+            background-size: 200% 200%;
+            background-position: 0% 100%;
+            mask-image: url('./partner-for-hotels--v1-1408px-blue.png');
+            -webkit-mask-image: url('./partner-for-hotels--v1-1408px-blue.png');
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-position: center;
+            -webkit-mask-position: center;
+            mix-blend-mode: multiply;
+            animation: blueGradient 3s ease-in-out 0s both 1 normal; /* name, duration, easing, delay, direction, iteration, fill-mode */
+        }
+        .blue.is-reversing {
+            background-position: 100% 0%;
+            animation-direction: reverse;
+        }
+
+        .red {
+            z-index: -2;
+            background: linear-gradient(to top left, white, white 40%, hsl(var(--second-left), 96%, 50%) 50%, hsl(var(--second-right), 96%, 50%));
+            background-size: 200% 200%;
+            background-position: 100% 100%;
+            mask-image: url('./partner-for-hotels--v1-1408px-red.png');
+            -webkit-mask-image: url('./partner-for-hotels--v1-1408px-red.png');
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            mask-position: center;
+            -webkit-mask-position: center;
+            mix-blend-mode: multiply;
+            animation: redGradient 3s ease-in-out 0.3s both 1 normal;
+        }
+        .is-reversing .red {
+            background-position: 0% 0%;
+            animation-direction: reverse;
+        }
+
+
+        @keyframes blueGradient {
+            0% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+
+        @keyframes redGradient {
+            0% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .toggle-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .toggle {
+            display: flex;
+            background: hsl(var(--first-left), 89%, 33%);
+            border-radius: 25px;
+            padding: 4px;
+            width: 140px;
+            position: relative;
+        }
+
+        .button-reset {
+            padding: 10px 20px;
+            border: none;
+            background: hsl(var(--second-left), 89%, 33%);
+            color: white;
+            font-weight: 500;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .button-reset:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .toggle-btn.active {
+            background: hsl(var(--second-left), 89%, 33%);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .sliders-container {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slider-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .slider-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.8);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #firstLeftSlider::-webkit-slider-thumb {
+            background: hsl(var(--first-left), 89%, 33%);
+        }
+        #firstLeftSlider::-moz-range-thumb {
+            background: hsl(var(--first-left), 89%, 33%);
+        }
+
+        #firstRightSlider::-webkit-slider-thumb {
+            background: hsl(var(--first-right), 89%, 38%);
+        }
+        #firstRightSlider::-moz-range-thumb {
+            background: hsl(var(--first-right), 89%, 38%);
+        }
+
+        #secondLeftSlider::-webkit-slider-thumb {
+            background: hsl(var(--second-left), 96%, 50%);
+        }
+        #secondLeftSlider::-moz-range-thumb {
+            background: hsl(var(--second-left), 96%, 50%);
+        }
+
+        #secondRightSlider::-webkit-slider-thumb {
+            background: hsl(var(--second-right), 96%, 50%);
+        }
+        #secondRightSlider::-moz-range-thumb {
+            background: hsl(var(--second-right), 96%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Layers Illustration Idea</h1>
+   
+    <div class="toggle-container">
+        <div class="toggle">
+            <button class="toggle-btn active" data-action="slow">Slow</button>
+            <button class="toggle-btn" data-action="fast">Fast</button>
+        </div>
+        <div class="toggle">
+            <button class="toggle-btn active" data-action="show">Show</button>
+            <button class="toggle-btn" data-action="hide">Hide</button>
+        </div>
+        <button class="button-reset">Reset Colours</button>
+    </div>
+
+    <div class="sliders-container">
+        <div class="slider-group">
+            <label class="slider-label">First</label>
+            <input type="range" id="firstLeftSlider" min="0" max="360" value="214">
+        </div>
+        <div class="slider-group">
+            <label class="slider-label">Offset 1</label>
+            <input type="range" id="firstRightSlider" min="-36" max="36" value="14">
+        </div>
+        <div class="slider-group">
+            <label class="slider-label">Second</label>
+            <input type="range" id="secondLeftSlider" min="0" max="360" value="14">
+        </div>
+        <div class="slider-group">
+            <label class="slider-label">Offset 2</label>
+            <input type="range" id="secondRightSlider" min="-36" max="36" value="9">
+        </div>
+    </div>
+
+    <div class="layered-illo">
+        <div class="red"></div>
+        <div class="blue"></div>
+    </div>
+
+    <script>
+        const layeredIllo = document.querySelector('.layered-illo');
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        const resetBtn = document.querySelector('.button-reset');
+        
+        let animationSpeed = 3; // Slow by default
+        let isShowMode = true;
+
+        // Speed toggle functionality
+        const speedButtons = document.querySelectorAll('[data-action="slow"], [data-action="fast"]');
+        speedButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                speedButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                animationSpeed = btn.dataset.action === 'fast' ? 1 : 3;
+                
+                // Restart animation with new speed
+                if (!isShowMode) {
+                    playAnimation(false);
+                } else {
+                    playAnimation(true);
+                }
+            });
+        });
+
+        // Toggle functionality
+        const showHideButtons = document.querySelectorAll('[data-action="show"], [data-action="hide"]');
+        showHideButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                showHideButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                isShowMode = btn.dataset.action === 'show';
+                playAnimation(isShowMode);
+            });
+        });
+
+        function playAnimation(isForward) {
+            const blue = document.querySelector('.blue');
+            const red = document.querySelector('.red');
+            
+            // Stop animations
+            blue.style.animation = 'none';
+            red.style.animation = 'none';
+            
+            // Force reflow to reset
+            void blue.offsetHeight;
+            
+            const blueDuration = animationSpeed;
+            const redDuration = animationSpeed;
+            const redDelay = animationSpeed * 0.1; // 10% of the duration for delay
+
+            if (!isForward) {
+                // Play animations backward
+                blue.style.animation = `blueGradient ${blueDuration}s ease-in-out 0s both reverse`;
+                red.style.animation = `redGradient ${redDuration}s ease-in-out ${redDelay}s both reverse`;
+                layeredIllo.classList.add('is-reversing');
+            } else {
+                // Play animations forward
+                blue.style.animation = `blueGradient ${blueDuration}s ease-in-out 0s both normal`;
+                red.style.animation = `redGradient ${redDuration}s ease-in-out ${redDelay}s both normal`;
+                layeredIllo.classList.remove('is-reversing');
+            }
+        }
+
+        // Reset button functionality
+        resetBtn.addEventListener('click', () => {
+            document.getElementById('firstLeftSlider').value = 214;
+            document.getElementById('firstRightSlider').value = 14;
+            document.getElementById('secondLeftSlider').value = 14;
+            document.getElementById('secondRightSlider').value = 9;
+            
+            updateFirstColors();
+            updateSecondColors();
+        });
+
+        // Slider functionality
+        const firstLeftSlider = document.getElementById('firstLeftSlider');
+        const firstRightSlider = document.getElementById('firstRightSlider');
+        const secondLeftSlider = document.getElementById('secondLeftSlider');
+        const secondRightSlider = document.getElementById('secondRightSlider');
+
+        function updateFirstColors() {
+            const mainValue = parseInt(firstLeftSlider.value);
+            const offset = parseInt(firstRightSlider.value);
+            const rightValue = (mainValue + offset + 360) % 360;
+            
+            document.documentElement.style.setProperty('--first-left', mainValue);
+            document.documentElement.style.setProperty('--first-right', rightValue);
+        }
+
+        function updateSecondColors() {
+            const mainValue = parseInt(secondLeftSlider.value);
+            const offset = parseInt(secondRightSlider.value);
+            const rightValue = (mainValue + offset + 360) % 360;
+            
+            document.documentElement.style.setProperty('--second-left', mainValue);
+            document.documentElement.style.setProperty('--second-right', rightValue);
+        }
+
+        firstLeftSlider.addEventListener('input', updateFirstColors);
+        firstRightSlider.addEventListener('input', updateFirstColors);
+        secondLeftSlider.addEventListener('input', updateSecondColors);
+        secondRightSlider.addEventListener('input', updateSecondColors);
+
+        // Initialize colors
+        updateFirstColors();
+        updateSecondColors();
+    </script>
+</body>
+</html>

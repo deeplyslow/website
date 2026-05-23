@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unusual CSS Background Textures</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #FFF1D4;
+        }
+
+        div {
+            display: inline-block;
+            margin: 20px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .texture-1 {
+            background-color: #eadcca;
+            background-image:
+                linear-gradient(
+                    128deg,
+                    transparent 0 10%,
+                    rgba(88, 53, 35, 0.24) 15% 19%,
+                    transparent 27% 36%,
+                    rgba(191, 110, 63, 0.45) 41% 50%,
+                    transparent 58% 71%,
+                    rgba(53, 39, 34, 0.2) 76% 79%,
+                    transparent 88%
+                ),
+                radial-gradient(140% 52% at 15% 36%, rgba(207, 120, 68, 0.72) 0 20%, transparent 43%),
+                radial-gradient(120% 44% at 78% 64%, rgba(97, 59, 45, 0.38) 0 18%, transparent 42%),
+                repeating-linear-gradient(
+                    132deg,
+                    rgba(255, 255, 255, 0) 0 8px,
+                    rgba(86, 59, 42, 0.12) 8px 11px,
+                    rgba(255, 255, 255, 0) 11px 23px
+                ),
+                repeating-linear-gradient(
+                    127deg,
+                    rgba(255, 255, 255, 0) 0 19px,
+                    rgba(252, 243, 233, 0.12) 19px 21px,
+                    rgba(255, 255, 255, 0) 21px 39px
+                ),
+                radial-gradient(28% 22% at 18% 78%, rgba(92, 54, 37, 0.22) 0 18%, transparent 60%),
+                radial-gradient(34% 28% at 65% 17%, rgba(255, 244, 230, 0.32) 0 18%, transparent 62%),
+                radial-gradient(24% 22% at 80% 70%, rgba(140, 78, 55, 0.22) 0 15%, transparent 56%),
+                radial-gradient(38% 30% at 38% 52%, rgba(229, 154, 105, 0.15) 0 20%, transparent 65%);
+            background-blend-mode: multiply, normal, multiply, overlay, screen, multiply, screen, multiply, soft-light;
+        }
+        .texture-2 {
+            background-color: #d6d2c6;
+            background-image:
+                radial-gradient(130% 70% at 20% 24%, rgba(76, 109, 92, 0.62) 0 17%, transparent 40%),
+                radial-gradient(105% 76% at 84% 32%, rgba(163, 96, 70, 0.46) 0 15%, transparent 40%),
+                linear-gradient(
+                    165deg,
+                    rgba(42, 35, 29, 0.22) 6% 10%,
+                    transparent 14% 32%,
+                    rgba(243, 235, 224, 0.24) 45% 53%,
+                    transparent 61% 74%,
+                    rgba(73, 95, 82, 0.2) 77% 81%,
+                    transparent 88%
+                ),
+                repeating-linear-gradient(
+                    13deg,
+                    rgba(255, 255, 255, 0) 0 14px,
+                    rgba(52, 61, 55, 0.1) 14px 16px,
+                    rgba(255, 255, 255, 0) 16px 31px
+                ),
+                repeating-linear-gradient(
+                    11deg,
+                    rgba(255, 255, 255, 0) 0 29px,
+                    rgba(250, 245, 239, 0.1) 29px 32px,
+                    rgba(255, 255, 255, 0) 32px 58px
+                ),
+                radial-gradient(24% 20% at 17% 72%, rgba(58, 68, 62, 0.22) 0 18%, transparent 58%),
+                radial-gradient(30% 24% at 58% 82%, rgba(167, 120, 87, 0.22) 0 16%, transparent 56%),
+                radial-gradient(22% 18% at 84% 60%, rgba(82, 67, 55, 0.18) 0 16%, transparent 56%),
+                radial-gradient(18% 16% at 54% 46%, rgba(244, 238, 229, 0.18) 0 18%, transparent 62%);
+            background-blend-mode: multiply, normal, overlay, multiply, screen, multiply, screen, multiply, screen;
+        }
+        .texture-3 {
+            background-color: #dbe1dc;
+            background-image:
+                linear-gradient(
+                    108deg,
+                    rgba(27, 63, 77, 0.48) 8% 13%,
+                    transparent 20% 34%,
+                    rgba(114, 84, 60, 0.27) 40% 48%,
+                    transparent 54% 68%,
+                    rgba(29, 42, 49, 0.2) 72% 77%,
+                    transparent 87%
+                ),
+                radial-gradient(128% 56% at 23% 58%, rgba(69, 116, 104, 0.56) 0 20%, transparent 45%),
+                radial-gradient(118% 58% at 84% 40%, rgba(189, 120, 75, 0.38) 0 15%, transparent 39%),
+                conic-gradient(
+                    from 216deg at 56% 54%,
+                    rgba(246, 237, 226, 0.3) 0 10%,
+                    transparent 10% 31%,
+                    rgba(67, 95, 97, 0.3) 31% 45%,
+                    transparent 45% 68%,
+                    rgba(146, 103, 74, 0.2) 68% 82%,
+                    transparent 84% 100%
+                ),
+                repeating-linear-gradient(
+                    108deg,
+                    rgba(255, 255, 255, 0) 0 10px,
+                    rgba(37, 55, 58, 0.1) 10px 13px,
+                    rgba(255, 255, 255, 0) 13px 29px
+                ),
+                repeating-linear-gradient(
+                    102deg,
+                    rgba(255, 255, 255, 0) 0 27px,
+                    rgba(247, 243, 236, 0.1) 27px 30px,
+                    rgba(255, 255, 255, 0) 30px 52px
+                ),
+                radial-gradient(22% 18% at 12% 18%, rgba(29, 42, 49, 0.18) 0 18%, transparent 58%),
+                radial-gradient(28% 22% at 84% 80%, rgba(255, 248, 243, 0.22) 0 16%, transparent 56%),
+                radial-gradient(34% 28% at 34% 70%, rgba(86, 151, 146, 0.16) 0 18%, transparent 60%);
+            background-blend-mode: multiply, normal, normal, screen, overlay, screen, multiply, screen, soft-light;
+        }
+        .texture-4 {
+            background-color: #e3d1bf;
+            background-image:
+                linear-gradient(
+                    22deg,
+                    rgba(87, 61, 44, 0.14) 0 8%,
+                    transparent 14% 28%,
+                    rgba(217, 170, 111, 0.28) 34% 44%,
+                    transparent 51% 66%,
+                    rgba(122, 71, 51, 0.18) 72% 76%,
+                    transparent 84%
+                ),
+                radial-gradient(150% 48% at 8% 34%, rgba(132, 59, 43, 0.52) 0 18%, transparent 40%),
+                radial-gradient(112% 54% at 92% 68%, rgba(97, 73, 41, 0.46) 0 16%, transparent 39%),
+                conic-gradient(
+                    from 244deg at 42% 56%,
+                    rgba(79, 54, 39, 0.22) 0 11%,
+                    transparent 11% 36%,
+                    rgba(255, 243, 229, 0.24) 36% 51%,
+                    transparent 51% 78%,
+                    rgba(92, 66, 50, 0.16) 78% 89%,
+                    transparent 89% 100%
+                ),
+                repeating-linear-gradient(
+                    156deg,
+                    rgba(255, 255, 255, 0) 0 9px,
+                    rgba(86, 54, 37, 0.11) 9px 12px,
+                    rgba(255, 255, 255, 0) 12px 23px
+                ),
+                repeating-linear-gradient(
+                    149deg,
+                    rgba(255, 255, 255, 0) 0 23px,
+                    rgba(248, 240, 230, 0.12) 23px 26px,
+                    rgba(255, 255, 255, 0) 26px 49px
+                ),
+                radial-gradient(24% 20% at 24% 76%, rgba(69, 55, 44, 0.2) 0 18%, transparent 58%),
+                radial-gradient(32% 26% at 74% 18%, rgba(255, 248, 238, 0.24) 0 16%, transparent 56%),
+                radial-gradient(20% 18% at 56% 48%, rgba(157, 105, 73, 0.16) 0 18%, transparent 58%),
+                radial-gradient(18% 16% at 14% 18%, rgba(255, 241, 228, 0.18) 0 16%, transparent 56%);
+            background-blend-mode: normal, multiply, multiply, soft-light, overlay, screen, multiply, screen, multiply, screen;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Unusual CSS Background Textures</h1>
+
+    <div class="texture-1"></div>
+    <div class="texture-2"></div>
+    <div class="texture-3"></div>
+    <div class="texture-4"></div>
+</body>
+</html>
